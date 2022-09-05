@@ -27,7 +27,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | Credit Score                |        850/1000            |
 | Motivações                  |      Conseguir a liberação de linha de crédito para a quitação de seu financiamento imobiliário           |
 | Frustações                  |      Até o momento não encontrou  junto às empresas tradicionais do segmento um aplicativo com a opção para financiamento imobiliário de maneira específica            |
-| Aplicativos |  Udemy, Repl.it, Twitter, Facebook                 |
+| Aplicativos |  Udemy, Repl.it, Twitter, Facebook, Whatsapp                 |
 
 
 
@@ -53,7 +53,7 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | História            | Geneci trabalhou durante sua vida como secretária de uma clínica de estética e se aposentou há 2 anos. Apesar de ter cuidado com sua saúde, recentemente descobriu que está com problemas de saúde que demandam uma cirurgia. Mesmo tendo buscado apoio financeiro de sua família, necessitará de um empréstimo para cobrir parte dos custos médicos. Sendo assim, iniciou pesquisas em busca de empréstimo com taxa atrativa e que aceite seu carro como garantia.
 | Credit Score        | 850/1000                                                                                                                
 | Motivações          | Deseja obter um empréstimo via aplicativo para realizar um tratamento médico. 
-| Frustrações?        | Como não domina o uso de novas tecnologias, precisa de um aplicativo que ofereça praticidade e facilidade uso                                                                       |
+| Frustrações        | Como não domina o uso de novas tecnologias, precisa de um aplicativo que ofereça praticidade e facilidade uso                                                                       |
 | Aplicativos         | Caixa, Meu INSS, Spotify, Whatsapp, Facebook |
 
 ## `Rafael Luis`
@@ -64,7 +64,8 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 | História   |    Rafael é formado há pouco tempo e, junto com dois amigos de faculdade, montou uma startup que está em fase final de aceleração. Ele e seus sócios ainda moram com os pais e não recebem pro-labore da sociedade que possuem. Para que a startup possa prestar bons serviços, é necessário realizar um investimento, mas os sócios não possuem recursos e buscam uma linha de empréstimo com baixo custo.
 | Credit Score        | 350/1000                                                                                                                
 | Motivações          | Deseja aumentar o crédito de sua micro-empresa para assim melhorar a agilidade de atendimento a seus clientes 
-| Frustrações?        | Como trabalha muito com manutenção em seus clientes, necessita de uma linha de crédito rápida para a reposição de peças. 
+| Frustrações        | Como trabalha muito com manutenção em seus clientes, necessita de uma linha de crédito rápida para a reposição de peças. |
+| Aplicativos | Telegram, Whatsapp, LinkedIn, Quora, Udemy 
 
 ## Histórias de Usuários
 
@@ -73,12 +74,12 @@ A partir do entendimento das necessidades expostas por cada persona, registramos
 | Eu como...`PERSONA`      | ...quero/desejo...`FUNCIONALIDADE`                                                                                              | ... para...`MOTIVO/VALOR`                                                                                |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | Tamires Leticia de Mello | Obter empréstimo de forma totalmente remota | Evitar o deslocamento físico e dedicar mais tempo ao seu trabalho                    |
-| Leonardo Jacques         | Obter empréstimo para saldar o seu financiamento imobiliário | Necessita de agilidade e singularidade, pois, até o momento não encontrou um aplicativo que possua a opção de empréstimo voltado especificamente à quitação de financiamento imobiliário, o que por ser mais direcionado, poderia ensejar melhores condições de pagamento.
-| Thomas Ferreira          | Poder verificar os requisitos de potenciais clientes para minha micro-empresa de crédito | Tentar evitar a inadimplência
-| Thomas Ferreira          | Ter facilidade e agilidade para o fornecimento de crédito  | Poder oferecer crédito com menos complicações burocráticas
-| Geneci dos Santos        | Ter autonomia para poder requisitar sozinha empréstimos pessoais  |  A conclusão do empréstimo via aplicativo com menos etapas possíveis
-| Rafael Luis              | Obter aprovação rápida de crédito para compra de peças de reposição  | Dar mais agilidade de resposta a seus clientes
-| Rafael Luis              | Aumentar a margem de crédito de sua micro-empresa  | Possibilitar sua expansão no mercado de forma competitiva
+| Leonardo Jacques         | Obter empréstimo para quitar o seu financiamento imobiliário | Necessita de agilidade e singularidade, pois, até o momento não encontrou um aplicativo que possua a opção de empréstimo voltado especificamente à quitação de financiamento imobiliário, o que por ser mais direcionado, poderia ensejar melhores condições de pagamento.
+| Thomas Ferreira          | Poder verificar os requisitos de potenciais clientes para sua micro-empresa de crédito | Tentar evitar a inadimplência.
+| Thomas Ferreira          | Ter facilidade e agilidade para gestão de crédito  | Poder oferecer crédito com menos complicações burocráticas.
+| Geneci dos Santos        | Conseguir empréstimo pessoal de forma simples e ofertando seu carro como garantia  |  Realizar tratamento de saúde.
+| Rafael Luis              | Obter aprovação rápida de crédito para investir em sua empresa | Dar mais agilidade de resposta a seus clientes.
+| Rafael Luis              | Aumentar a margem de crédito de sua micro-empresa  | Possibilitar sua expansão no mercado de forma competitiva.
 
 
 
@@ -118,3 +119,4 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 | RE-01 | O projeto deverá ter seu código versionado utilizando Git.   |
 | RE-02 | A equipe não deve terceirizar o desenvolvimento do trabalho. |
 | RE-03 | Não haverá investimento financeiro no projeto.               |
+| RE-04 | O projeto focará em tecnologia backend com utilização da linguagem C# |
