@@ -36,21 +36,25 @@ As personas inclusas durante o processo de pesquisa e desenvolvimento do problem
 
 | ![persona 5-edit1](https://user-images.githubusercontent.com/93105125/184463353-81e040c4-a04e-4d21-86df-6d9196dce137.png) | Thomas Ferreira, 33 anos                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| Ocupação                    | Empreendedor  - Pessoa Jurídica
+| Ocupação                    | Empreendedor  - Pessoa Jurídica  |
+| História                    | Após ter se formado, Thomas montou algumas empresas que não acabaram não prosperando. Ao tomar conhecimento da Lei Complementar 167 resolveu abrir uma Empresas Simples de Crédito, tendo aportado como capital inicial suas economias. O negócio começou a crescer e Thomas sentiu necessidade de implementar um sistema que o auxilie na gestão dos créditos. Contudo, ao buscar soluções no mercado, encontrou apenas sistemas complexos e caros, que teriam impacto negativo em seus resultados. Além disso, sente dificuldade em divulgar sua empresa e econtrar leads qualificados.
 | Credit Score                | Fornecedor de crédito        |
 | Motivações                  | Ser capaz de inserir sua empresa no mercado de forma efetiva. Ser capaz de avaliar o perfil do seu cliente em potencial de forma clara e direta.   |
 | Frustações                  | Não ter a capacidade de arcar com os altos custos dos grandes _softwares_ de analise de crédito.     |
+| Aplicativos | Devendum, Investing, Meus ativos, Calculadora, Spotify
 
 
 
 ## `Geneci dos Santos`
 
-| ![persona 4-edit1](https://user-images.githubusercontent.com/93105125/184463368-b5644e11-5e5b-43db-84db-0b1f980d5fa3.png) | Geneci dos Santos, 63 anos                                                                                                       |
+| ![persona 4-edit1](https://user-images.githubusercontent.com/93105125/184463368-b5644e11-5e5b-43db-84db-0b1f980d5fa3.png) | Geneci dos Santos, 67 anos                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Ocupação            | Recém-aposentada - Pessoa Física                                                                                                 
+| Ocupação            | Recém-aposentada - Pessoa Física      |
+| História            | Geneci trabalhou durante sua vida como secretária de uma clínica de estética e se aposentou há 2 anos. Apesar de ter cuidado com sua saúde, recentemente descobriu que está com problemas de saúde que demandam uma cirurgia. Mesmo tendo buscado apoio financeiro de sua família, necessitará de um empréstimo para cobrir parte dos custos médicos. Sendo assim, iniciou pesquisas em busca de empréstimo com taxa atrativa e que aceite seu carro como garantia.
 | Credit Score        | 850/1000                                                                                                                
-| Motivações          | Deseja obter um empréstimo via aplicativo para realizar um tratamento médico, pois não possui plano de saúde 
-| Frustrações?        | Como não domina o uso de novas tecnologias, precisa de um aplicativo que ofereça praticidade e facilidade  uso                                                                                                                       
+| Motivações          | Deseja obter um empréstimo via aplicativo para realizar um tratamento médico. 
+| Frustrações?        | Como não domina o uso de novas tecnologias, precisa de um aplicativo que ofereça praticidade e facilidade uso                                                                       |
+| Aplicativos         | Caixa, Meu INSS, Spotify, Whatsapp, Facebook |
 
 ## `Rafael Luis`
 
