@@ -1,36 +1,65 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
-
-## Diagrama de Fluxo
-
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
-
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
-
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
-
 ## Wireframes
+### Tela Home-Page
+A tela home page apresenta os serviços que podem ser executados através do site e a variação de mercado das principais cryptomoedas no momento, além de ícones para as redes sociais. O bloco apresenta os mesmos elementos fixos: cabeçalho e rodapé.
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+- Cabeçalho da home-page traz quatro elementos distintos:
+- Componente de "Conversor", que permite acesso rápido ao conversor de moedas;
+- Componente de "Contato", que traz as informações sobre os endereços e formas de contato;
+- Componente de "login";
+- Componente de "Criar conta";
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+![Wireframe crypto-conversor](img/Home.png)
+
+
+### Tela - Converta Agora
+A tela "Converta Agora" apresenta as possibilidades de conversão à escolha do usuário. Ao clicar em "Selecione sua Crypto" ou " Selecione sua moeda", será exibida uma lista com os nomes das criptomoedas e moedas fiduciárias disponíveis. 
+
+![Converta Agora](img/Conversor.png)
+
+### Tela - Entrar
+Permite ao usuário realizar login no site, validando seus dados cadastrados previamente.
+
+![Entrar](img/Login.png)
+
+
+### Tela - Criar conta
+Permite ao usuário realizar o seu cadastro.
+
+![Criar Conta](img/Cadastro.png)
+
+
+### Tela - Contato
+A tela Contato mostra meios de contato do usuário com o site.
+
+![Contato](img/Contato.png)
+
+## Protótipo
+
+É possível ver com mais detalhes e interagir com o protótipo clicando 
+[aqui.](https://www.figma.com/file/4KEv3TedF6aTZg7BqXaWUy/Crypto-Conversor?node-id=0%3A1) 
+Em nosso arquivo de protótipo contamos com as seguintes sessões:
+### Identidade visual
+A identidade visual constitui atualmente nas diretrizes que serão utilizados na aplicação.
+Atualmente conta com a especificação de cores junto de seu código hexadecimal.
+![Identidade visual](img/identidade_visual.png)
+### Landing page
+A landing page está dividida em três partes, a pagina inicial com a chamada para a conversão direta, a parte de exposição de serviços e um gráfico rápido para análise de cotação de alguma criptomoeda.
+Bem como o seu cabeçalho(barra de navegação) e rodapé (copyright e links rápidos).
+
+![Landing page](img/landing_page.png)
+
+### Página de conversão
+A página de conversão constitui a funcionalidade principal da nossa aplicação, é nela em que todo o valor está agregado ao usuário, onde podemos visualizar e converter as criptomoedas, separada em três métodos de conversão.
+![Página de conversão](img/pagina_de_conversão.png)
+
+## Fluxo de usuários  
+É possível ver com mais detalhes e interagir com o fluxo do usuário clicando [aqui.](https://whimsical.com/criptoconverter-9NHppfd56ARZFNezT4zYPP)
+![Fluxo de usuários](img/user_flow.png)
+O contato inicial do usuário é a interação com a landing page, nela será apresentado a proposta inicial do projeto, bem como o logo, nome da aplicação e informações que forem úteis para a conquista do usuário.
+
+Nela existirão alguns links para a tela de Contato e de Conversão.
+Na página de conversão existirão três funcionalidades principais, a de conversão de valores de criptomoedas individuais para fiduciários e a operação inversa.
+Logo abaixo será possível converter uma lista de criptomoedas ao mesmo tempo, podendo escolher também uma lista de fiduciários para que a análise dos valores pós conversão entre fiduciários também seja possível.

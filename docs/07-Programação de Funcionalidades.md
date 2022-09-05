@@ -1,28 +1,125 @@
-# Programação de Funcionalidades
+# Funcionalidades do sistema
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
+Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema. O respectivo endereço (URL) e outras orientações de acesso são são apresentadas na sequência.
 
-Implementação do sistema descrita por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos com os artefatos criados (código fonte), deverão apresentadas as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+### Landing page
 
-Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos desenvolvidos.
+A tela principal do sistema apresenta possibilidade de inscrição, fazer login na página, acessar os serviços e ver a cotação do bitcoin.
 
-|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| Emitir um relatório de tarefas no mês   | relatorio.shtml |
+![Landing page](img/tela_main.png)
 
-# Instruções de acesso
+__Requisitos atendidos__
+* RF-001;
+* RF-004;
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+__Artefatos da funcionalidade__
+* index.html;
+* style.css;
+* normalize.css;
+* logo-final.png;
+* calculadora.png;
+* carteira.png;
+* grafico.png.
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+__Instruções de acesso__
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+1. Abra um navegador de internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/crypto-conversor/
+2. A landing page será exibida pelo navegador.
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+### Conversão entre moedas
+
+Essa tela permite que o usuário faça a conversão entre moedas, sejam elas digitais ou fiduciárias.
+
+![Landing page](img/tela_conversao.png)
+
+__Requisitos atendidos__
+* RF-002;
+
+__Artefatos da funcionalidade__
+* conversor.html;
+* style.css;
+* normalize.css;
+* conversor.js
+
+__Instruções de acesso__
+
+1. Abra um navegador de internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/crypto-conversor/. A landing page será exibida pelo navegador.
+2. Clique o botão "Converta agora", na seção "Nossos serviços" ou clique no item "conversor" presente no menu superior da página;
+3. Selecione a criptomoeda que deseja converter;
+4. Selecione a moeda fiduciária que deseja ver o valor correspondente à criptomoeda;
+5. Insira a quantidade de moedas que serão convertidas;
+6. Clique no botão "converter valor";
+
+Se deseja fazer a conversão de moeda fiduciária em moeda digital, basta utilizar o botão "inverter".
+
+### Monitoramento do preço de alguns ativos selecionados
+
+Essa tela permite que o usuário veja em tempo real a cotação de algumas criptomoedas selecionadas.
+
+![Landing page](img/tela_cotacoes.png)
+
+__Requisitos atendidos__
+* RF-003;
+
+__Artefatos da funcionalidade__
+* monitore_mercado.html;
+* style.css;
+* normalize.css;
+* currency.js
+
+__Instruções de acesso__
+
+1. Abra um navegador de internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/crypto-conversor/monitore_mercado.html
+2. A página será exibida pelo navegador.
+3. Alternativamente pode-se seguir os seguintes passos:
+4. Abra um navegador de internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/crypto-conversor/. A landing page será exibida pelo navegador.
+5. Clique o botão "Monitores agora", na seção "Nossos serviços".
+
+
+
+### Dados para contato
+
+Essa tela permite que o usuário envie uma mensagem para a equipe do projeto.
+
+![Landing page](img/tela_contato.png)
+
+__Requisitos atendidos__
+* RF-005;
+
+__Artefatos da funcionalidade__
+* contact.html;
+* style.css;
+* normalize.css;
+
+
+__Instruções de acesso__
+
+1. Abra um navegador de internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/crypto-conversor/. 2. A landing page será exibida pelo navegador.
+2. Clique no item "contato" presente no menu superior da página;
+3. Preencha os campos disponíveis;
+4. Clique no botão "Enviar minha mensagem"
+
+
+
+### Formulário para login
+
+Essa tela permite que o usuário envie uma mensagem para a equipe do projeto.
+
+![Landing page](img/tela_entrar.png)
+
+__Requisitos atendidos__
+* RF-004;
+
+__Artefatos da funcionalidade__
+* log-in.html;
+* style.css;
+* normalize.css;
+* create-account.js
+
+
+__Instruções de acesso__
+
+1. Abra um navegador de internet e informe a seguinte URL: https://icei-puc-minas-pmv-ads.github.io/crypto-conversor/. 2. A landing page será exibida pelo navegador.
+2. Clique no item "criar conta" presente no menu superior da página;
+3. Preencha os campos disponíveis;
+4. Clique no botão "Criar minha conta"

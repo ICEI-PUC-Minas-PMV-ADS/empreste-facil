@@ -1,33 +1,35 @@
-# TÍTULO DO PROJETO
+# Empreste-Fácil 
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de Aplicação Interativa - Turma 1 - Grupo 3`
 
-`SEMESTRE`
+`Segundo Semestre - 2022/02`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
-## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+Nosso projeto chama-se **Empreste-Fácil**, um sistema de análise, de manda e fornecimento de crédito. </br>
+Nosso foco é ajudar desde o cidadão que necessita de credito até as pequenas empresas que fornecem este serviço. </br>
+O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e também ao pequeno empresário, fujindo um pouco dos padrões burocráticos e demorados convencionais.
 
-## Orientador
+# Integrantes
 
-* Nome completo do professor 1
+* <a href="https://github.com/aarondalla">Aaron Duarte Dalla</a>
+* <a href="https://github.com/gamirca">Gabriel Miranda Cangussu</a>
+* <a href="https://github.com/iagxferreira">Iago José Silva Ferreira</a>
+* <a href="https://github.com/mths1094">Matheus Henique Rodrigues</a>
+* <a href="https://github.com/Tafarel-Mello">Tafarel Luis de Mello</a>
+* <a href="https://github.com/tprates">Thiago Costa Prates</a>
 
-## Instruções de utilização
+# Orientador
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+* Rosilane Ribeiro da Mota
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+# Instruções de utilização
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+* Site publicado na Internet
+* Acesse o projeto pelo computador ou pelo celular
+* Browser compatível: Chrome, Firefox e Edge
 
 # Documentação
 
@@ -37,20 +39,15 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 <li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
 <li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
-<li><a href="docs/06-Template Padrão da Aplicação.md"> Template Padrão da Aplicação</a></li>
+<li><a href="docs/06-Template padrão do Site.md"> Template padrão do Site</a></li>
 <li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
 <li><a href="docs/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
 <li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="docs/10-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
-<li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
-<li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
-<li><a href="docs/13-Referências.md"> Referências</a></li>
+<li><a href="docs/10-Referências.md"> Referências</a></li>
 </ol>
 
-# Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+<li><a href="presentation/README.md">Clique aqui para ver nossa apresentação!</a></li>

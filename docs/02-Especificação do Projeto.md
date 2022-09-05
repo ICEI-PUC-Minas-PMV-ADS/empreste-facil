@@ -1,44 +1,84 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Com base nos estudos e pesquisas desenvolvidas pelo grupo em parceria com potenciais usuários, levando em consideração suas necessidades e dificuldades do dia a dia na obtenção de créditos oriundos de empréstimos, podemos agora consolidar estas propostas de melhoria na forma de _personas_ e _histórias de usuário_.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As personas inclusas durante o processo de pesquisa e desenvolvimento do problema são apresentadas nas imagens a seguir:
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+## `TAMIRES LETICIA DE MELLO`
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+| ![persona 1-edit1](https://user-images.githubusercontent.com/93105125/184463332-bc11ea3f-570a-431b-b761-0578aad9be0f.png) | Tamires Leticia de Mello, 32 anos                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------     |
+| Ocupação                                    | Designer de bolsas e sapatos - Pessoa Física / Pessoa Jurídica |
+| História        | Tamires se formou há dois anos e dedica grande parte de seu tempo ao trabalho. Contudo, apesar de seus esforços, ainda está no início da carreira e possui salário de R$ 2.106,87. Mora de aluguel e possui um pet, sendo que seu salário é suficiente apenas para as despesas necessárias, como alimentação, transporte, moradia e manutenção de seu pet. Gostaria de conseguir melhorar suas roupas e acessórios e comprar um carro |                      
+| Credit Score                                |  900/1000                                                                   
+| Motivações | Obter crédito via empréstimo de forma remota e sem a necessidade do deslocamento presencial voltado às pessoas físicas de modo à conseguir ter uma imagem melhor em seu ambiente de trabalho e ser valorizada |
+| Restrições anteriores de crédito em seu nome | Não                                                                                        
+| Frustrações |  Ainda que possua um elevado Credit Score e não possua restrições anteriores de crédito em seu nome, encontra dificuldade em adquirir empréstimos nas empresas tradicionais, pois, por ser autônoma, estas empresas exigem sua presença física para análise e eventual concessão da linha de crédito. Isso gera grande dificuldade, visto que para comparecer as instituições financeiras, ela precisa deixar de lado algum de seus clientes|
+|    Aplicativos                    |     Facebook, Instagram, Vogue Runway, Percentil, TagWalk, Stylicious, TagWalk |
+
+## `Leonardo Jacques`
+
+| ![persona 2-edit1](https://user-images.githubusercontent.com/93105125/184463347-8705e0fa-419c-405e-bbdf-054222c739ac.png) | Leonardo Jacques, 36 anos                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Ocupação                    | Operador de máquinas CNC - Pessoa Física |
+| História | Leonardo se casou recentemente e sua esposa está grávida de seu primeiro filho. É torneiro CNC, mas está estudando programação para tentar um emprego com melhor remuneração. Comprou, com financiamento, um apartamento de 90 m², com três quartos e uma vaga de garagem. Sua esposa trabalha como professora de ensino infantil e está com 20 semanas de gravidez. Pretende pesquisar sobre linhas de crédito com taxas atrativas para avaliar a possibilidade de quitar seu financiamento imobiliário |
+| Credit Score                |        850/1000            |
+| Motivações                  |      Conseguir a liberação de linha de crédito para a quitação de seu financiamento imobiliário           |
+| Frustações                  |      Até o momento não encontrou  junto às empresas tradicionais do segmento um aplicativo com a opção para financiamento imobiliário de maneira específica            |
+| Aplicativos |  Udemy, Repl.it, Twitter, Facebook                 |
+
+
+
+
+## `Thomas Ferreira`
+
+| ![persona 5-edit1](https://user-images.githubusercontent.com/93105125/184463353-81e040c4-a04e-4d21-86df-6d9196dce137.png) | Thomas Ferreira, 33 anos                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Ocupação                    | Empreendedor  - Pessoa Jurídica
+| Credit Score                | Fornecedor de crédito        |
+| Motivações                  | Ser capaz de inserir sua empresa no mercado de forma efetiva. Ser capaz de avaliar o perfil do seu cliente em potencial de forma clara e direta.   |
+| Frustações                  | Não ter a capacidade de arcar com os altos custos dos grandes _softwares_ de analise de crédito.     |
+
+
+
+## `Geneci dos Santos`
+
+| ![persona 4-edit1](https://user-images.githubusercontent.com/93105125/184463368-b5644e11-5e5b-43db-84db-0b1f980d5fa3.png) | Geneci dos Santos, 63 anos                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Ocupação            | Recém-aposentada - Pessoa Física                                                                                                 
+| Credit Score        | 850/1000                                                                                                                
+| Motivações          | Deseja obter um empréstimo via aplicativo para realizar um tratamento médico, pois não possui plano de saúde 
+| Frustrações?        | Como não domina o uso de novas tecnologias, precisa de um aplicativo que ofereça praticidade e facilidade  uso                                                                                                                       
+
+## `Rafael Luis`
+
+| ![persona 3-edit1](https://user-images.githubusercontent.com/93105125/184463370-e1c99e92-fe8d-4509-af57-d5392746152b.png) | Rafael Luis, 28 anos                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Ocupação            | Técnico de TI - Pessoa Física / Pessoa Jurídica   |
+| História   |    Rafael é formado há pouco tempo e, junto com dois amigos de faculdade, montou uma startup que está em fase final de aceleração. Ele e seus sócios ainda moram com os pais e não recebem pro-labore da sociedade que possuem. Para que a startup possa prestar bons serviços, é necessário realizar um investimento, mas os sócios não possuem recursos e buscam uma linha de empréstimo com baixo custo.
+| Credit Score        | 350/1000                                                                                                                
+| Motivações          | Deseja aumentar o crédito de sua micro-empresa para assim melhorar a agilidade de atendimento a seus clientes 
+| Frustrações?        | Como trabalha muito com manutenção em seus clientes, necessita de uma linha de crédito rápida para a reposição de peças. 
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+A partir do entendimento das necessidades expostas por cada persona, registramos então as seguintes histórias de usuários.
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| Eu como...`PERSONA`      | ...quero/desejo...`FUNCIONALIDADE`                                                                                              | ... para...`MOTIVO/VALOR`                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Tamires Leticia de Mello | Obter empréstimo de forma totalmente remota | Evitar o deslocamento físico e dedicar mais tempo ao seu trabalho                    |
+| Leonardo Jacques         | Obter empréstimo para saldar o seu financiamento imobiliário | Necessita de agilidade e singularidade, pois, até o momento não encontrou um aplicativo que possua a opção de empréstimo voltado especificamente à quitação de financiamento imobiliário, o que por ser mais direcionado, poderia ensejar melhores condições de pagamento.
+| Thomas Ferreira          | Poder verificar os requisitos de potenciais clientes para minha micro-empresa de crédito | Tentar evitar a inadimplência
+| Thomas Ferreira          | Ter facilidade e agilidade para o fornecimento de crédito  | Poder oferecer crédito com menos complicações burocráticas
+| Geneci dos Santos        | Ter autonomia para poder requisitar sozinha empréstimos pessoais  |  A conclusão do empréstimo via aplicativo com menos etapas possíveis
+| Rafael Luis              | Obter aprovação rápida de crédito para compra de peças de reposição  | Dar mais agilidade de resposta a seus clientes
+| Rafael Luis              | Aumentar a margem de crédito de sua micro-empresa  | Possibilitar sua expansão no mercado de forma competitiva
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+
+
 
 ## Requisitos
 
@@ -46,58 +86,31 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+| ID     | Descrição do Requisito                                                                                                                                                                                                | Prioridade |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| RF-001 | A aplicação deve permitir ao cliente criar seu cadastro pessoal.                                               | ALTA      |
+| RF-002 | A aplicação deve permitir a aprovação de crédito 100% online.                                                  | ALTA      |
+| RF-003 | A aplicação deve permitir ao cliente informar a modalidade de crédito desejada para a escolha das melhores taxas.    | ALTA      |
+| RF-004 | A aplicação deve permitir ao fornecedor de crédito verificar o _score_ de credito do requerente.               | ALTA      |
+| RF-005 | A aplicação deve apresentar um metodo simples para a demanda e aprovação do serviço.                           | ALTA       |
+| RF-006 | A aplicação deve ter a opção de utilizar a modalidade _pessoa fisica_ ou _pessoa juridica_.                    | ALTA       |
+| RF-007 | A aplicação deve permitir ao cliente aumentar seu _score_ com base nos dados de pagamentos de fornecedores.    | MÉDIA      |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| ID      | Descrição do Requisito                                                                      | Prioridade |
+| ------- | ------------------------------------------------------------------------------------------- | ---------- |
+| RNF-001 | A aplicação deverá ser de fácil leitura e entendimento.                                          | MÉDIA      |
+| RNF-002 | A aplicação deverá ser publicado na internet.                                                    | MÉDIA      |
+| RNF-003 | A aplicação deverá ser responsivo e poderá ser acessado em diversos dispositivos e equipamentos. | MÉDIA      |
+| RNF-004 | A aplicação deverá ser compatível com diversos navegadores                                       | MÉDIA      |
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-## Diagrama de Casos de Uso
-
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+| ID    | Descrição da Restrição                                       |
+| ----- | ------------------------------------------------------------ |
+| RE-01 | O projeto deverá ter seu código versionado utilizando Git.   |
+| RE-02 | A equipe não deve terceirizar o desenvolvimento do trabalho. |
+| RE-03 | Não haverá investimento financeiro no projeto.               |
