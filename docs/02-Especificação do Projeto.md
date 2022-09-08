@@ -96,10 +96,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-001 | A aplicação deve permitir ao cliente criar seu cadastro pessoal.                                               | ALTA      |
 | RF-002 | A aplicação deve permitir a aprovação de crédito 100% online.                                                  | ALTA      |
 | RF-003 | A aplicação deve permitir ao cliente informar a modalidade de crédito desejada para a escolha das melhores taxas.    | ALTA      |
-| RF-004 | A aplicação deve permitir ao fornecedor de crédito verificar o _score_ de credito do requerente.               | ALTA      |
-| RF-005 | A aplicação deve apresentar um metodo simples para a demanda e aprovação do serviço.                           | ALTA       |
+| RF-004 | A aplicação deve permitir ao usuário informar seu score de crédito (SERASA, BoaVista, etc.).       | ALTA      |
+| RF-005 | A aplicação deve apresentar uma maneira simples para a realizar a demanda e aprovação do serviço.                           | ALTA       |
 | RF-006 | A aplicação deve ter a opção de utilizar a modalidade _pessoa fisica_ ou _pessoa juridica_.                    | ALTA       |
-| RF-007 | A aplicação deve permitir ao cliente aumentar seu _score_ com base nos dados de pagamentos de fornecedores.    | MÉDIA      |
+| RF-007 | A aplicação deve permitir ao demandante de crédito visualizar o valor das parcelas, da amortização e dos juros.    | MÉDIA      |
 
 ### Requisitos não Funcionais
 
