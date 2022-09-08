@@ -120,4 +120,4 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 | RE-02 | A equipe não deve terceirizar o desenvolvimento do trabalho. |
 | RE-03 | Não haverá investimento financeiro no projeto.               |
 | RE-04 | O projeto focará em tecnologia backend com utilização da linguagem C# |
-| RE-05 | As requisições do usuário deverão ser salvas mediante sua autenticação de login no aplicativo |
+| RE-05 | As requisições do usuário deverão ser salvas mediante autenticação de login no aplicativo |
