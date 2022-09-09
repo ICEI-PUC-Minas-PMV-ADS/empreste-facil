@@ -1,4 +1,4 @@
-# Empreste-Fácil  (https://user-images.githubusercontent.com/93105125/189248732-91c88f37-4551-439b-8a30-d339d036004b.png)
+# Empreste-Fácil  ![Untitled_design__1_-removebg-preview (1)](https://user-images.githubusercontent.com/93105125/189248920-c8498655-089b-4ad8-963f-650f99aac208.png)
 
 
 `Análise e Desenvolvimento de Sistemas`
