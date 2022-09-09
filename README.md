@@ -50,4 +50,4 @@ O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e tam
 
 # Apresentação
 
-<li><a href="presentation">Clique aqui para ver nossa apresentação!</a></li>
+https://user-images.githubusercontent.com/93105125/189245866-475eafa4-629a-42ff-ab0d-9f2444f12742.mp4
