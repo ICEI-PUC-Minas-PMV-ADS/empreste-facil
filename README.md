@@ -19,7 +19,7 @@ O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e tam
 * <a href="https://github.com/iagxferreira">Iago José Silva Ferreira</a>
 * <a href="https://github.com/luskastoop">Lucas lemos de Araújo</a>
 * <a href="https://github.com/Tafarel-Mello">Tafarel Luis de Mello</a>
-* <a href="https://github.com/tprates">  </a>
+* <a href="">Marcelo Amorim Barbosa Filho</a>
 
 # Orientador
 
