@@ -121,3 +121,11 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 | RE-03 | Não haverá investimento financeiro no projeto.               |
 | RE-04 | O projeto focará em tecnologia backend com utilização da linguagem C# |
 | RE-05 | As requisições do usuário deverão ser salvas mediante autenticação de login no aplicativo |
+
+## Diagrama de caso de uso
+
+![CasosDeUso](https://user-images.githubusercontent.com/51962729/189246433-b63c7966-3b1c-4627-b06d-a1d5903cb08f.jpg)
+
+
+
+
