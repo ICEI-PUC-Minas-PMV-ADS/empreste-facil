@@ -1,5 +1,5 @@
-# Empreste-Fácil 
-
+![EmpresteFacilLogo](https://user-images.githubusercontent.com/93105125/189248920-c8498655-089b-4ad8-963f-650f99aac208.png)
+# Empreste Fácil
 `Análise e Desenvolvimento de Sistemas`
 
 `Projeto: Desenvolvimento de Aplicação Interativa - Turma 1 - Grupo 3`
@@ -17,6 +17,7 @@ O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e tam
 * <a href="https://github.com/mths1094">Matheus Henrique Rodrigues</a>
 * <a href="https://github.com/Tafarel-Mello">Tafarel Luis de Mello</a>
 * <a href="https://github.com/luskastoop">Lucas Lemos de Araújo</a>
+* <a href="">Marcelo Amorim Barbosa Filho</a>
 
 # Orientador
 
