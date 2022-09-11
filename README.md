@@ -1,4 +1,7 @@
-![EmpresteFacilLogo](https://user-images.githubusercontent.com/93105125/189248920-c8498655-089b-4ad8-963f-650f99aac208.png)
+<p align="center">
+    <img alt="Empreste Facil Logo" src="https://user-images.githubusercontent.com/93105125/189248920-c8498655-089b-4ad8-963f-650f99aac208.png">
+</p>
+
 # Empreste Fácil
 `Análise e Desenvolvimento de Sistemas`
 
