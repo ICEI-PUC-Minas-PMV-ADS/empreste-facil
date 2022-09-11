@@ -45,9 +45,10 @@ A metodologia *scrum* foi conjugada com o método *kanban* de forma a tornar vis
 * *Backlog*: contém as tarefas identificadas e necessárias para a criação do produto;
 * *To do*: contém as tarefas que serão incluídas na *sprint*;
 * *In progress*: contém as tarefas que foram iniciadas e estão em desenvolvimento;
+* *Locked*: nesta coluna são colocadas tarefas que foram paralisadas em razão de algum motivo impeditivo que precisa de solução.
+* *Review*: contém as tarefas que necessitam ser revisadas, seja a nivel de código ou reformulação da mesma.
 * *Test*: contém as tarefas que foram concluídas e serão checadas, de forma a se controlar a qualidade do desenvolvimento;
 * *Done*: contém as tarefas que foram concluídas e testadas;
-* *Locked*: nesta coluna são colocadas tarefas que foram paralisadas em razão de algum motivo impeditivo que precisa de solução.
 
 ### Processo
 A figura abaixo ilustra a utilização do *kanboard*:
