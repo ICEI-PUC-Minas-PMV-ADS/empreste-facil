@@ -1,6 +1,6 @@
 # Introdução
 
-O mercado de crédito no Brasil sempre foi altamente regulado, ficando restrito apenas às grandes instituições financeiras. Esse cenário sofreu alteração no ano de 2019 com a promulgação da Lei Complementar 167, que criou as Empresas Simples de Crédito - ESCs. As ESCs empresas não integrantes do sistema financeiro autorizadas a emprestar recursos próprios com liberdade para fixar a taxa de juros a ser cobrada, visto que a Lei da Usura (Decreto nº 22.626, de 7 de abril de 1933) não se aplica a elas.
+O mercado de crédito no Brasil sempre foi altamente regulado, ficando restrito apenas às grandes instituições financeiras. Esse cenário sofreu alteração no ano de 2019 com a promulgação da Lei Complementar 167, que criou as Empresas Simples de Crédito - ESCs. As ESCs são empresas não integrantes do sistema financeiro autorizadas a emprestar recursos próprios com liberdade para fixar a taxa de juros a ser cobrada, visto que a Lei da Usura (Decreto nº 22.626, de 7 de abril de 1933) não se aplica a elas.
 
 As ESCs têm como foco a disponibilização de crédito para empresários individuais, microempresários e empresário de pequeno porte.  Os pequenos negócios brasileiros representam 99% (14 milhões) do total de empresas privadas e são responsáveis por 55% do total de postos com carteira assinada, de acordo com o Sebrae.
 
