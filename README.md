@@ -17,7 +17,6 @@ O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e tam
 * <a href="https://github.com/aarondalla">Aaron Duarte Dalla</a>
 * <a href="https://github.com/gamirca">Gabriel Miranda Cangussu</a>
 * <a href="https://github.com/iagxferreira">Iago José Silva Ferreira</a>
-* <a href="https://github.com/mths1094">Matheus Henrique Rodrigues</a>
 * <a href="https://github.com/Tafarel-Mello">Tafarel Luis de Mello</a>
 * <a href="https://github.com/luskastoop">Lucas Lemos de Araújo</a>
 * <a href="">Marcelo Amorim Barbosa Filho</a>
