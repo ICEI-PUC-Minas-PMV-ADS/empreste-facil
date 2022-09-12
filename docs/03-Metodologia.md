@@ -34,11 +34,10 @@ Conforme citado, a equipe utilizará a metodologia *scrum*, de modo que haverá 
 * _**Product owner**_: Iago José Silva Ferreira
 * _**Equipe de *desenvolvimento***_:
     * Gabriel Miranda Cangussu
-    * Matheus Henique Rodrigues
-    * Thiago Costa Prates
+    * Lucas Lemos de Araújo
 * _**Equipe de *design***_:
     * Tafarel Luis de Mello
-    * Renan Costa Cunha
+    * Marcelo Amorim Barbosa Filho
 
 ### Divisão de Papéis
 A metodologia *scrum* foi conjugada com o método *kanban* de forma a tornar visual a distribuição de tarefas, o que está sendo feito por meio da ferramenta *projects* do *github*. As raias existentes são:
