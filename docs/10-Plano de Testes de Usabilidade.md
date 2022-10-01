@@ -2,7 +2,7 @@
 
 O teste de usabilidade será realizado por meio de **teste de aprendizado**, ou seja, será feita a experimentação de pessoas que utilizarão o sistema pela primeira vez. Para tanto, serão selecionadas, de forma aleatória, **cinco** pessoas  com mais de 25 anos para a realização de **testes remotos não moderados** de usabilidade.
 
-A quantidade de pessoas baseou-se na metodologia proposta no artigo https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6, visto que os problemas identificados caem exponencialmente, conforme figura abaixo:
+A quantidade de pessoas baseou-se na metodologia proposta no artigo https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6, visto que os problemas identificados caem exponencialmente a cada teste feito, conforme figura abaixo:
 
 ![image](https://user-images.githubusercontent.com/51962729/193430692-855df8d8-3964-42a7-918d-300be5dfc945.png)
 
