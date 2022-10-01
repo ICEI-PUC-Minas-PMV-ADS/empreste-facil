@@ -52,4 +52,5 @@ O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e tam
 
 # Apresentação
 
-<li><a href="presentation/README.md">Clique aqui para ver nossa apresentação!</a></li>
+
+https://user-images.githubusercontent.com/93105125/193431176-5a703716-cf52-47ff-91bc-3bef1c81e74d.mp4
