@@ -13,7 +13,7 @@ Os testes terão como **objetivos** obter respostas para os seguintes pontos:
 4. A interface de solicitação de empréstimo é intutiva e de fácil utilização?
 5. As funcionalidades do administrador são intuitivas e de fácil uso?
 
-
+Por fim, no que se refere à coleta de dados, será utilizado formulário criado no google forms.
 
 Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar.
 
