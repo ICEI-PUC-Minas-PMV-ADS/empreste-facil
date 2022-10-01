@@ -10,7 +10,7 @@
 `Segundo Semestre - 2022/02`
 
 Nosso projeto chama-se **Empreste Fácil**, um sistema de análise, demanda e fornecimento de crédito. </br>
-Nosso foco é ajudar desde o cidadão que necessita de credito até as pequenas empresas que fornecem este serviço. </br>
+Nosso foco é ajudar, desde o cidadão que necessita de credito, até as pequenas empresas que fornecem este serviço. </br>
 O intuito é facilitar o acesso ao crédito, com segurança, ao consumidor e também ao pequeno empresário, fujindo um pouco dos padrões burocráticos e demorados convencionais.
 
 # Integrantes
