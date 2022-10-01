@@ -15,7 +15,7 @@ Os testes terão como **objetivos** obter respostas para os seguintes pontos:
 
 Por fim, no que se refere à coleta de dados, será utilizado formulário criado no Google Forms.
 
-##Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar##
+## Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar ##
 
 |Caso de Teste | 01 - Verificar responsividade|
 |:--|:--|
