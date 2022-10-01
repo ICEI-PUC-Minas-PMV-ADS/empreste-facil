@@ -1,6 +1,18 @@
 # Plano de Testes de Usabilidade
 
-O teste de usabilidade será realizado por meio de "teste de aprendizado", ou seja, será feita a experimentação de pessoas que utilizarão o sistema pela primeira vez. Para tanto, serão selecionadas, de forma aleatória, cinco pessoas que realização testes remotos não moderados de usabilidade.
+O teste de usabilidade será realizado por meio de **teste de aprendizado**, ou seja, será feita a experimentação de pessoas que utilizarão o sistema pela primeira vez. Para tanto, serão selecionadas, de forma aleatória, **cinco** pessoas  com mais de 25 anos para a realização de **testes remotos** não moderados de usabilidade.
+
+A quantidade de pessoas baseou-se na metodologia proposta no artigo https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6, visto que os problemas identificados caem exponencialmente, conforme figura abaixo:
+
+![image](https://user-images.githubusercontent.com/51962729/193430692-855df8d8-3964-42a7-918d-300be5dfc945.png)
+
+Os testes terão como **objetivos** obter respostas para os seguintes pontos:
+1. O sistema possui responsividade?
+2. O sistema está com a navegabilidade correta?
+3. Há controle de usuários e das informações acessadas por cada pessoa?
+4. A interface de solicitação de empréstimo é intutiva e de fácil utilização?
+5. As funcionalidades do administrador são intuitivas e de fácil uso?
+
 
 
 Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar.
@@ -21,8 +33,7 @@ Planejamento de realização de testes com usuários definindo as operações qu
 |:--|:--|
 |**Objetivo do teste**| O usuário deverá se cadastrar para entrar na aplicação.|
 |**Passos**|1 - Entrar na plataforma.<br/>2 - Clicar em Log-In.<br/>3 - Acessar aplicação com seu usuário.|
-|**Critérios de Êxito**|Cadastrar o usuário e conseguir logar na aplicação.|
-
+|**Critérios de Êxito**|100% dos usuários deve ser capaz de realizar um cadastro e logar na aplicação.|
 
 |Caso de Teste | 04 - Analisar interface de soliciação de empréstimo|
 |:--|:--|
