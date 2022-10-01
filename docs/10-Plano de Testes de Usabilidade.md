@@ -1,6 +1,6 @@
 # Plano de Testes de Usabilidade
 
-O teste de usabilidade será realizado por meio de **teste de aprendizado**, ou seja, será feita a experimentação de pessoas que utilizarão o sistema pela primeira vez. Para tanto, serão selecionadas, de forma aleatória, **cinco** pessoas  com mais de 25 anos para a realização de **testes remotos não moderados** de usabilidade.
+O teste de usabilidade será realizado por meio de **teste de aprendizado**, ou seja, será feita a experimentação de pessoas que utilizarão o sistema pela primeira vez. Para tanto, serão selecionadas, de forma aleatória, **cinco** pessoas  com mais de 25 anos para a realização de **testes remotos não moderados**.
 
 A quantidade de pessoas baseou-se na metodologia proposta no artigo https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6, visto que os problemas identificados caem exponencialmente a cada teste feito, conforme figura abaixo:
 
@@ -13,9 +13,9 @@ Os testes terão como **objetivos** obter respostas para os seguintes pontos:
 4. A interface de solicitação de empréstimo é intutiva e de fácil utilização?
 5. As funcionalidades do administrador são intuitivas e de fácil uso?
 
-Por fim, no que se refere à coleta de dados, será utilizado formulário criado no google forms.
+Por fim, no que se refere à coleta de dados, será utilizado formulário criado no Google Forms.
 
-Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar.
+##Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar##
 
 |Caso de Teste | 01 - Verificar responsividade|
 |:--|:--|
