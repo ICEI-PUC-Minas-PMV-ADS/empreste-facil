@@ -18,7 +18,7 @@ Por fim, no que se refere à coleta de dados, será utilizado formulário criado
 ## Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar ##
 
 |Caso de Teste | 01 - Verificar responsividade|
-|:--:|:--|
+|:--|:--|
 |**Objetivo do teste**|Os usuários deverão acessar a página via computador e celular.| 
 |**Passos**|1 - Acessar o site via computador e verificar se o conteúdo é responsivo.<br/>2 - Acessar o site via celular e verificar se o conteúdo é responsivo<br/>|
 |**Critérios de Êxito**|O Conteúdo deve ser responsivo.|
