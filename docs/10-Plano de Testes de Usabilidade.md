@@ -22,7 +22,8 @@ Por fim, no que se refere à coleta de dados, será utilizado formulário criado
 |**Objetivo do teste**|Os usuários deverão acessar a página via computador e celular.| 
 |**Passos**|1 - Acessar o site via computador e verificar se o conteúdo é responsivo.<br/>2 - Acessar o site via celular e verificar se o conteúdo é responsivo<br/>|
 |**Critérios de Êxito**|O Conteúdo deve ser responsivo.|
-|    |    |
+
+
 |Caso de Teste | 02 - Verificar de links|
 |**Objetivo do teste**|Verificar se o direcionamento dos links estão corretos.|
 |**Passos**|1 - Acessar a aplicação.<br/>2 - Clicar sobre os links disponíveis.</br> 3 - Ser direcionado para uma página correta.
