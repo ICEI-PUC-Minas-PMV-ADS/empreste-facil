@@ -8,38 +8,48 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 Abaixo é apresentado o diagrama de classes do projeto:
 
-![DiagramaClasseEmpresteFacil](https://user-images.githubusercontent.com/51962729/191139023-fa7f2eb3-61ec-4df8-8ed9-ffbbee207b30.jpg)
+![Diagrama de Classe](./img/diagrama-de-classe.svg)
 
 
 ## Modelo ER (Projeto Conceitual)
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
+![Modelo Conceitual de Banco de Dados](./img/modelo-conceitual.svg)
 
-A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
 ## Projeto da Base de Dados
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
-Para mais informações, consulte o microfundamento "Modelagem de Dados".
+![Projeto de Banco de Dados](./img/diagrama-entidade-relacionamento.svg)
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Editores de Código:
+- Github: Ferramenta como ferramenta de organização, serve como local síncrono de armazenamento e controle do repositório do projeto.
+- Github Actions: Ferramenta utilizada para a integração contínua e deploy do projeto,
+- Visual Studio Code: Ferramenta para a confecção de códigos mais complexos.
+- Visual Studio 2022: Ferramenta utilizada como ambiente de desenvolvimento integrado.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Ferramentas de Comunicação e Organização:
+- Microsoft Teams: Ferramenta utilizada para realizar as reuniões de equipe, assim como as reuniões semanais em conjunto com a coordenadora do projeto.
+- GitHub Projects: Ferramenta utilizada para a organização e separação de tarefas no projeto.
 
-## Hospedagem
+Ferramentas de Desenho de Tela (wireframing):
+- Canva: Ferramenta utilizada como um protótipo na realização do design do projeto de interface.
+- Figma: Ferramenta utilizada na versão final do projeto de interface.
+- Draw.io: Ferramenta utilizada na confecção dos wireframes.
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+Desenvolvimento
+- C# e .NET com o ASP.net MVC: Desenvolvimento do core da aplicação, arquitetura, build, compilação da aplicação.
+- Entity Framework: Framework utilizado para a conexão e controle do banco de dados.
+- SQL Server: Banco de dados relacional utilizado como o armazenamento central de dados da aplicação.
+- Razor Pages: Framework utilizado para a confecção de páginas da web interativas.
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+## Deploy
+
+Para a hospedagem do projeto, serão utilizados serviços em núvel providos pela Amazon
+- Amazon Relational Database Service (RDS) - Provisionamento de banco de dados
+- Amazon Elastic Compute Cloud (EC2) - Hospedagem e distribuição da aplicação 
+- Amazon Route 53 - Gerenciamento de DNS

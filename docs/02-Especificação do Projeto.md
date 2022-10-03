@@ -118,7 +118,7 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 ## Diagrama de casos de uso
 
-![CasosDeUso](./img/CasosDeUso.jpg)
+![Casos de Uso](./img/casos-de-uso.jpg)
 
 
 

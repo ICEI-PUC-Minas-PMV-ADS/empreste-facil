@@ -7,12 +7,33 @@ Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+### Pessoa Física (solicitar empréstimo)
 
-![Diagrama de Fluxo (1)](https://user-images.githubusercontent.com/93105125/193428653-eebe479d-e0a6-48fa-8a7d-60856d317a05.svg)
+Após o cadastro/login, terá acesso à sua página personalizada, de acordo com o que deseja:
+
+* Deseja solicitar um empréstimo: Novo pedido, preencher valor do empréstimo e número de parcelas desejadas. Caso concorde com a simulação de parcelas, o pedido irá para o sistema, onde será avaliado pelas empresas/pela empresa
+
+* Deseja consultar os contratos já vigentes: Caso alguma empresa aceite o pedido, ele aparecerá em contratos vigentes. Onde o usuário terá algumas opções:
+
+            * Quitar o empréstimo
+            * Renegociar o empréstimo
+
+* Deseja consultar ou alterar seus dados pessoais: Meus dados
+
+### Pessoa Jurídica (oferecer empréstimo) - Em análise
+
+Após o cadastro/login terá acesso à sua página personalizada, de acordo com o que deseja:
+
+* Deseja oferecer um empréstimo: Pedidos de crédito. Terá a opção de aceitar ou recusar
+
+* Deseja consultar os contratos já vigentes: Meus contratos. Terá a opção de confirmar o pagamento ou denunciar atraso
+
+* Deseja consultar ou alterar os dados da empresa: Meus dados
+
+
+![Diagrama de Fluxo](./img/diagrama-de-fluxo.svg)
 
 ## Wireframes
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
-
-![Wireframe-2](https://user-images.githubusercontent.com/93105125/193428205-1c8b36d1-4688-4428-85b4-967a303bf54c.svg)
+Ilustração semelhante do layout de elementos fundamentais na interface.
+![Wireframe-2](./img/wireframe.svg)
