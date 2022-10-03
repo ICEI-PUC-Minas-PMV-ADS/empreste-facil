@@ -49,7 +49,7 @@ Desenvolvimento
 
 ## Deploy
 
-Para a hospedagem do projeto, serão utilizados serviços em núvel providos pela Amazon
+Para a hospedagem do projeto, serão utilizados serviços em núvem providos pela Amazon
 - Amazon Relational Database Service (RDS) - Provisionamento de banco de dados
 - Amazon Elastic Compute Cloud (EC2) - Hospedagem e distribuição da aplicação 
 - Amazon Route 53 - Gerenciamento de DNS
