@@ -1,6 +1,6 @@
 
 # Metodologia
-A aplicação será desenvolvida com base no protocolo HTTP, utilizando a linguagem de marcação HTML5 com formatação em CSS. A programação da aplicação será feita em javascrip com a utilização da ferramenta Visual Studio Code. Todo o versionamento do projeto será feito via Git com repositório GitHub. Quanto ao método de gestão, será utilizada a metodologia ágil SCRUM.
+A aplicação será desenvolvida com base no padrão MVC, majoritariamente na linguagem C# com a utilização da ferramenta Visual Studio. Todo o versionamento do projeto será feito via Git com repositório GitHub. Quanto ao método de gestão, será utilizada a metodologia ágil SCRUM.
 
 <b>Relação de Ambientes de Trabalho</b></br>
 
