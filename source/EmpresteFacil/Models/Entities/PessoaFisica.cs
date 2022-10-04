@@ -12,7 +12,6 @@
 
         public PessoaFisica()
         {
-
         }
 
         public PessoaFisica(string nome, string sobrenome, string cpf, string rg, string grauEscolaridade, DateTime dataNascimento, bool tipo) 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmpresteFacil;
 public class Startup
@@ -22,8 +23,8 @@ public class Startup
         
         services.AddDatabaseDeveloperPageExceptionFilter();
         
-        services.AddDbContext<IdentityContext>(
-            options => options.UseSqlServer(connectionString));
+        services.AddDbContext<DatabaseContext>(
+            options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         
         services.AddDefaultIdentity<IdentityUser>(
             options => options.SignIn.RequireConfirmedAccount = true)

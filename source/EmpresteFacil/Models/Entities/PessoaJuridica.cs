@@ -11,7 +11,7 @@
 
         }
 
-        public PessoaJuridica(string razaoSocial, string cnpj, DateTime dataConstituicao)
+        public PessoaJuridica(string razaoSocial, string cnpj, DateTime dataConstituicao) 
             : base(codUsuario, email, celular, telefoneFixo)
         {
             RazaoSocial = razaoSocial;
