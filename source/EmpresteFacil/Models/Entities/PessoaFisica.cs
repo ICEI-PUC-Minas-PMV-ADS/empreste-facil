@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PessoaFisica.Models.Entities
+﻿namespace EmpresteFacil.Models.Entities
 {
     public class PessoaFisica : Usuario
     {

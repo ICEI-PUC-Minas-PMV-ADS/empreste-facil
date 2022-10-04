@@ -1,24 +1,22 @@
-﻿using System;
+﻿namespace EmpresteFacil.Models.Entities
+{
+    public class PessoaJuridica : Usuario
+    {
+        public string RazaoSocial { get; set; }
+        public string CNPJ { get; set; }
+        public DateTime DataConstituicao { get; set; }
 
-namespace PessoaJuridica.Models.Entities
-{ 
-	class PessoaJuridica : Usuario
-	{
-		public string RazaoSocial { get; set; }
-		public string CNPJ { get; set; }
-		public DateTime DataConstituicao { get; set; }
+        public PessoaJuridica()
+        {
 
-		public PessoaJuridica()
-		{
+        }
 
-		}
-
-		public PessoaJuridica(string razaoSocial, string cnpj, DateTime dataConstituicao) 
-			: base(codUsuario, email, celular, telefoneFixo)
-		{
-			RazaoSocial = razaoSocial;
-			CNPJ = cnpj;
-			DataConstituicao = dataConstituicao;
-		}
-	}
+        public PessoaJuridica(string razaoSocial, string cnpj, DateTime dataConstituicao)
+            : base(codUsuario, email, celular, telefoneFixo)
+        {
+            RazaoSocial = razaoSocial;
+            CNPJ = cnpj;
+            DataConstituicao = dataConstituicao;
+        }
+    }
 }

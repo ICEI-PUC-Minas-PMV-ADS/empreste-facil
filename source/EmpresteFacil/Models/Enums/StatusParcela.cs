@@ -1,9 +1,10 @@
-﻿using System;
-
-public enum StatusParcela : int
+﻿namespace EmpresteFacil.Models.Enums
 {
-	EmDia = 0,
+    public enum StatusParcela : int
+    {
+    EmDia = 0,
 	PagoEmDia = 1,
 	Atrasado = 2,
 	PagoComAtraso = 3
+    }
 }
