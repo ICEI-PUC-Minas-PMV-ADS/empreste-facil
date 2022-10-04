@@ -15,7 +15,7 @@
 
         }
 
-        public PessoaFisica(string nome, string sobrenome, string cpf, string rg, string grauEscolaridade, DateTime dataNascimento, bool tipo)
+        public PessoaFisica(string nome, string sobrenome, string cpf, string rg, string grauEscolaridade, DateTime dataNascimento, bool tipo) 
             : base(codUsuario, email, celular, telefoneFixo)
         {
             Nome = nome;
@@ -23,6 +23,7 @@
             Cpf = cpf;
             Rg = rg;
             GrauEscolaridade = grauEscolaridade;
+            DataNascimento = dataNascimento;
             Tipo = tipo;
         }
     }

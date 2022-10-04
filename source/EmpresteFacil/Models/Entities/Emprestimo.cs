@@ -8,6 +8,7 @@
         public int NumeroParcelas { get; set; }
         public double TaxaJuros { get; set; }
         public DateTime DataInicioEmprestimo { get; set; }
+        List<Parcelas> Parcelas { get; set; }
 
         public Emprestimo()
         {

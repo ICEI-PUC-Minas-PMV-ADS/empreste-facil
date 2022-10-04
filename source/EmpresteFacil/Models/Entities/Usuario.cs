@@ -9,7 +9,6 @@
 
         public Usuario()
         {
-
         }
 
         public Usuario(int codUsuario, string email, string celular, string telefoneFixo)
