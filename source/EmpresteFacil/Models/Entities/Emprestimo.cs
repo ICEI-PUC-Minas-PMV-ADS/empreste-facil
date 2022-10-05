@@ -1,28 +1,25 @@
-﻿namespace EmpresteFacil.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EmpresteFacil.Models.Entities
 {
+    [Table("Emprestimos")]
     public class Emprestimo
     {
+        [Key]
         public int EmprestimoId { get; set; }
         public string TipoEmprestimo { get; set; }
+        [Display(Name = "Valor do empréstimo")]
+        [Column(TypeName = "decimal(10,2")]
         public double Valor { get; set; }
+        [Display(Name = "Valor da parcela")]
         public int NumeroParcelas { get; set; }
+        [Display(Name = "Taxa de juros")]
+        [Column(TypeName = "decimal(4,2")]
         public double TaxaJuros { get; set; }
+        [DataType(DataType.DateTime)]
+        [Display(Name = "Data de início do empréstimo")]
         public DateTime DataInicioEmprestimo { get; set; }
-        List<Parcelas> Parcelas { get; set; }
-
-        public Emprestimo()
-        {
-
-        }
-
-        public Emprestimo(int emprestimoId, string tipoEmprestimo, double valor, int numeroParcelas, double taxaJuros, DateTime dataInicioEmprestimo)
-        {
-            EmprestimoId = emprestimoId;
-            TipoEmprestimo = tipoEmprestimo;
-            Valor = valor;
-            NumeroParcelas = numeroParcelas;
-            TaxaJuros = taxaJuros;
-            DataInicioEmprestimo = dataInicioEmprestimo;
-        }
+        List<Parcelas> Parcelas { get; set; }      
     }
 }

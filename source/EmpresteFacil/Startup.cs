@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace EmpresteFacil;
 public class Startup
@@ -23,12 +24,12 @@ public class Startup
         
         services.AddDatabaseDeveloperPageExceptionFilter();
         
-        services.AddDbContext<DatabaseContext>(
-            options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        services.AddDbContext<DatabaseContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         
         services.AddDefaultIdentity<IdentityUser>(
             options => options.SignIn.RequireConfirmedAccount = true)
-            .AddEntityFrameworkStores<IdentityContext>();
+            .AddEntityFrameworkStores<IdentityDbContext>();
 
         //services.AddDbContext<DatabaseContext>(
         //    options => options.UseSqlServer(connectionString));
