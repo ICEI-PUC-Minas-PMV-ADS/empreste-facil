@@ -1,12 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\source",
-    "\\source\\EmpresteFacil",
-    "\\source\\EmpresteFacil\\Models",
-    "\\source\\EmpresteFacil\\Models\\Entities",
-    "\\source\\EmpresteFacil\\Models\\Enums"
+    ""
   ],
-  "SelectedNode": "\\source\\EmpresteFacil\\Models\\LoanRequest.cs",
   "PreviewInSolutionExplorer": false
 }

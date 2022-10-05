@@ -14,7 +14,6 @@ namespace EmpresteFacil.Context
         //public DbSet<Installment>? Installments { get; set; }
         //public DbSet<LoanRequest>? LoanRequests { get; set; }
 
-        //Entities - Classes acrescentadas - Aaron
         public DbSet<Emprestimo> Emprestimos { get; set; }
         public DbSet<Parcelas> Parcelas { get; set; }
         public DbSet<PessoaFisica> PessoasFisicas { get; set; }
