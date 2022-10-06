@@ -9,19 +9,34 @@ namespace EmpresteFacil.Models.Entities
     {
         [Key]
         public int UsuarioId { get; set; }
+
         [Required(ErrorMessage = "Preencha o email")]
         [DisplayName("Email")]
         [DataType(DataType.EmailAddress)]
         [EmailAddress(ErrorMessage = "E-mail inválido")]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "O email deve ter entre 3 e 255 caracteres.")]
         public string Email { get; set; }
+
         [Required(ErrorMessage = "Preencha o telefone")]
         [DisplayName("Telefone")]
         [DataType(DataType.PhoneNumber)]
         public string Celular { get; set; }
+
         [Required(ErrorMessage = "Preencha o telefone")]
         [DisplayName("Telefone")]
         [DataType(DataType.PhoneNumber)]
         public string TelefoneFixo { get; set; }
+
+        public Usuario()
+        {
+        }
+
+        public Usuario(int usuarioId, string email, string celular, string telefoneFixo)
+        {
+            UsuarioId = usuarioId;
+            Email = email;
+            Celular = celular;
+            TelefoneFixo = telefoneFixo;
+        }
     }
 }

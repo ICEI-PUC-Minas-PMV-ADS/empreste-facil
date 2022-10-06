@@ -16,5 +16,13 @@ namespace EmpresteFacil.Models.Entities
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm:ss tt}")]
         [Display(Name = "Data de constituição ou início das atividades")]
         public DateTime DataConstituicao { get; set; }
+
+        public PessoaJuridica(string cnpj, string razaoSocial, DateTime dataConstituicao, int usuarioId, string email, string celular, string telefoneFixo)
+            : base (usuarioId, email, celular, telefoneFixo)
+        {
+            CNPJ = cnpj;
+            RazaoSocial = razaoSocial;
+            DataConstituicao = dataConstituicao;
+        }
     }
 }
