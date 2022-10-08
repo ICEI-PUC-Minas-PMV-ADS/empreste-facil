@@ -1,23 +1,87 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    height: 100vh;
 }
 
-.img-logo{
-    height: 10em;
-    width: 10em;
+.teste {
+    border: 1px solid red;
+}
+.std-color {
+    color: #008134;
+}
+
+.std-bk-color {
+    color: white;
+    background: #008134;
+}
+
+.img-logo {
+    height: 5rem;
+    width: 5rem;
+}
+.mx-wid{
+    width:100%;
+}
+.mx-wid-cont{
+    margin:auto;
+    width:768px;
+}
+/*-----------------Main---------------------*/
+
+.btn-parcela-borda-dir{
+    border-right:1.5px;
+    border-color:darkgreen;
+}
+.btn-parcela-borda-esq{
+    border-left: 1.5px;
+    border-color: darkgreen;
+}
+[Type="range"]::-webkit-slider-thumb {
+    background: #008134;
+}
+
+/*---------------Roda Pe----------------*/
+.rodape {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+}
+
+.m-s a {
+    background: #008134;
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+    .m-s a:hover {
+        transition: .4s;
+        transform: scale(1.1);
+    }
+.icon_color{
+    color:white;
 }
