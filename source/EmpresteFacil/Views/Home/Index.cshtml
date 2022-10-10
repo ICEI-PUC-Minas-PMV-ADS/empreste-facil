@@ -8,17 +8,19 @@
 			<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="" src="~/images/Logo_EmpresteFacil.png" alt="Logo Empreste Fácil"></a>
 		</div>
 		<div class="col">
-			<div class="col">
+
+			<div class="col slide-container">
 				<label for="customRange1" class="form-label"><h5>Simule o emprestimo desejado aqui</h5></label>
-				<input type="range" min="500,00" max="50000,00" class="std-color std-margin slider" id="meuLimite">
-				<p class="float-start">Valor solicitado:<span id="valor-solicitado"></span> </p>
+				<input type="range" min="1" max="100" value="1" class="std-color std-margin slider" id="meuLimite">
+				<p class="float-start">Valor solicitado: R$ <span id="valor-solicitado"></span></p>
 			</div>
+
 			<div class="col">
 				<div class="btn-group mx-wid" role="group" aria-label="Basic example">
-					<button type="button" class="btn std-bk-color p-3 ">Valor 1</button>
-					<button type="button" class="btn std-bk-color p-3 ">Valor 2</button>
-					<button type="button" class="btn std-bk-color p-3 ">Valor 3</button>
-					<button type="button" class="btn std-bk-color p-3 ">Valor 4</button>
+					<button  type="button" class="btn std-bk-color p-3 ">6x de <span id="par-1"></span> </button>
+					<button  type="button" class="btn std-bk-color p-3 ">12x de <span id="par-2"></span> </button>
+					<button  type="button" class="btn std-bk-color p-3 ">24x de <span id="par-3"></span> </button>
+					<button  type="button" class="btn std-bk-color p-3 ">36x de <span id="par-4"></span> </button>
 				</div>
 				<h5 class="p-3">Simulação de suas parcelas</h5>
 			</div>
