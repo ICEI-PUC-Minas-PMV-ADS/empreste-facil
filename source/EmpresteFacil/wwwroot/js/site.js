@@ -1,4 +1,8 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var slider = document.getElementById("meuLimite");
+var output = document.getElementById("valor-solicitado");
 
-// Write your JavaScript code.
+output.innerHTML = slider.value;
+
+slider.oninput = function (){
+    output.innerHTML = this.value;
+}
