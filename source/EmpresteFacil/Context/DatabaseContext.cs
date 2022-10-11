@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EmpresteFacil.Models;
 using EmpresteFacil.Models.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace EmpresteFacil.Context
 {
@@ -21,4 +22,5 @@ namespace EmpresteFacil.Context
         public DbSet<Usuario> Usuarios { get; set; }
 
     }
+
 }
