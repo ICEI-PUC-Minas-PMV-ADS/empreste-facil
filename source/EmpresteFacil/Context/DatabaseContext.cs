@@ -2,6 +2,7 @@
 using EmpresteFacil.Models;
 using EmpresteFacil.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EmpresteFacil.Context
 {
@@ -20,6 +21,7 @@ namespace EmpresteFacil.Context
         public DbSet<PessoaFisica> PessoasFisicas { get; set; }
         public DbSet<PessoaJuridica> PessoasJuridicas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
 
     }
 

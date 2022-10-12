@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EmpresteFacil.Models.Entities
 {
     [Table("Endereços")]
-    class Endereco
+    public class Endereco
     {
         [Key]
         [Required(ErrorMessage = "Informe seu endereço")]
