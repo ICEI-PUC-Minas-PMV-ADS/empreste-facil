@@ -2,10 +2,15 @@
 
 namespace EmpresteFacil.Models
 {
-    public class Loan : BaseModel
+    public class Loan
     {
-        public int UserId { get; set; }
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public int LoanRequestId { get; set; }
+        [Required]
         public int ApproverId { get; set; }
+        [Required]
         public string? State { get; set; }
     }
 }
