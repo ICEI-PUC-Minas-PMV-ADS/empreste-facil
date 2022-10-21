@@ -2,9 +2,10 @@
 
 namespace EmpresteFacil.Models
 {
-    public class Installment : BaseModel
+    public class Installment
     {
-        public Guid LoanId{ get; set; }
+        [Key]
+        public int Id { get; set; }
         public DateTime DueDate { get; set; }
     }
 }
