@@ -18,6 +18,22 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult HowItWorks()
+    {
+        return View();
+    }
+
+
+    public IActionResult WhoWeAre()
+    {
+        return View();
+    }
+
+    public IActionResult Help()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

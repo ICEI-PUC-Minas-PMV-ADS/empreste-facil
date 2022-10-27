@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Loan\" />
+    <Folder Include="wwwroot\video\" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />

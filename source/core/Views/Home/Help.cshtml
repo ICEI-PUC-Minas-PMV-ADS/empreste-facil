@@ -1,0 +1,42 @@
+﻿@model HelpViewModel
+
+<table class="container">
+	<tr>
+		<td>
+			<div class="row">
+				<div class="col-10 col-md-10 col-lg-10 mx-auto">
+
+					<h4>Envie a sua duvida</h4>
+					<form asp-controller="Account" asp-action="Register" method="post">
+						<hr />
+						<div asp-validation-summary="All" class="text-danger"></div>
+						<div class="form-group">
+							<label asp-for="Nome"> </label>
+							<input asp-for="Nome" class="form-control" />
+							<span asp-validation-for="Nome" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Email"></label>
+							<input asp-for="Email" class="form-control" />
+							<span asp-validation-for="Email" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Telefone"></label>
+							<input asp-for="Telefone" class="form-control" />
+							<span asp-validation-for="Telefone" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Mensagem"></label>
+							<textarea asp-for="Mensagem" class="form-control" style="height:10rem;"></textarea>
+						</div>
+						<div class="form-group mt-4">
+							<input type="submit" class="btn btn-outline-success btn-lg" value="Enviar mensagem" />
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+		</td>
+	<tr>
+</table>
