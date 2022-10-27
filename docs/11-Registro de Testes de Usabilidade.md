@@ -1,7 +1,7 @@
 # Registro de Testes de Usabilidade
 
 Veremos aqui o resultado de nosso progresso no desenvolvimento de nosso projeto.
-Teremos aqui uma visao geral principalmente do lado cliente, o _*User Experience*_.
+Teremos aqui uma visao geral principalmente do lado cliente, o _*User Experience*_ no primeiro momento.
 Iniciaremos com as telas desenvolvidas que demonstram as funcionalidades propostas e em seguida teremos os registros em video dos requisitos de usabilidade.
 
 # Telas do Usuário
