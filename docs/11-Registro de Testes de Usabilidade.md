@@ -38,14 +38,16 @@ Nesta página pode-se ver nossa apresentação do produto e quem nós somos.
  
  No vídeo a seguir, podemos constatar o requisito numero 1: Responsividade.
  Pode-se constatar que o objetivo foi atingido como esperado. Veja o teste de responsividade:
- 
- https://user-images.githubusercontent.com/93105125/198709907-be586e07-9cf0-4999-a5ed-aa6190502c0b.mp4
- 
+  
+
+https://user-images.githubusercontent.com/93105125/198711732-81ed6154-a3f3-44c0-88b9-5037b99fa684.mp4
+
+
  
   ## CT-01 - Verificar Links
   
   A seguir, temos o registro do funcionamento dos links existentes na aplicação. O intuito desta verificação é saber se eles estão direcionando o usuário de forma correta. Veja o teste de links:
   
-  https://user-images.githubusercontent.com/93105125/198710285-06c81798-3171-4377-9322-85cb72802de3.mp4
-  
- 
+
+https://user-images.githubusercontent.com/93105125/198711792-6a9fc514-1962-4ad6-ac5a-8ffd690076a4.mp4
+
