@@ -2,20 +2,22 @@
 @inject SignInManager<IdentityUser> SignInManager
 @if (SignInManager.IsSignedIn(User))
 {
-    <form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm"
-      method="post" class="navbar-left">
-        <ul class="nav navbar-nav navbar-left">
-            <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
-                Logout : @User.Identity.Name &nbsp;
-            </button>
-        </ul>
-    </form>
+	<form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm"
+	  method="post" class="navbar-left">
+		<ul class="nav navbar-nav navbar-left">
+			<button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+				Logout : @User.Identity.Name &nbsp;
+			</button>
+		</ul>
+	</form>
 }
 else
 {
-    <ul class="nav navbar-nav navbar-left">
-        <a class="nav-link text-black" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}",Context.Request.Path, Context.Request.QueryString)">Log in</a>
-        <a class="nav-link text-black" asp-controller="Account" asp-action="Register">Registro</a>
-    </ul>
+	<ul class="nav navbar-nav navbar-left">
+		<div class="btn-group" role="group">
+			<a class="nav-link text-black btn btn-outline-success" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}",Context.Request.Path, Context.Request.QueryString)">Log in</a>
+			<a class="nav-link text-black btn btn-outline-secondary" asp-controller="Account" asp-action="Register">Registro</a>
+		</div>
+	</ul>
 
 }
