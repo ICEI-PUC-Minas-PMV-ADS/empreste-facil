@@ -1,4 +1,4 @@
-namespace tests
+namespace EmpresteFacil.Tests
 {
     public class UnitTest1
     {

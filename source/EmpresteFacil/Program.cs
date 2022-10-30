@@ -1,6 +1,5 @@
-using EmpresteFacil;
+namespace EmpresteFacil;
 
-namespace LojaDeLanches;
 public class Program
 {
     public static void Main(string[] args)

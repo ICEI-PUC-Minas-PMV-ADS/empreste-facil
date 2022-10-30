@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core", "core.csproj", "{B63D2E19-C318-4884-831A-C9836E68D449}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpresteFacil", "EmpresteFacil\EmpresteFacil.csproj", "{B63D2E19-C318-4884-831A-C9836E68D449}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tests", "..\tests\tests.csproj", "{F6756ED2-A0A7-4297-AEAB-3E2F8F506167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpresteFacil.Tests", "EmpresteFacil.Tests\EmpresteFacil.Tests.csproj", "{F6756ED2-A0A7-4297-AEAB-3E2F8F506167}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{7B4C238D-54C6-4E7C-B2A2-9CC6AC53ECDD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
