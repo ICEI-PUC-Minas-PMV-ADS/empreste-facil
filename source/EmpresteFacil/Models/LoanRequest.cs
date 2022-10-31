@@ -2,9 +2,18 @@
 
 namespace EmpresteFacil.Models
 {
-    public class LoanRequest: BaseModel
+    public class LoanRequest
     {
+        [Key]
+        public int Id { get; set; }
+        [Display(Name = "Id do Usuário")]
+        [Required]
+        public string? UserId { get; set; }
+        [Display(Name = "Data de aprovação")]
         public DateTime? ApprovedAt { get; set; }
+
+        [Required]
+        [Display(Name = "Valor do empréstimo")]
         public decimal Value { get; set; }
     }
 }
