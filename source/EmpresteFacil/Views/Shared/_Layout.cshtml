@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,6 +43,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Ajuda</a>
                                 </li>
+                                @if (SignInManager.IsSignedIn(User))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="LoanRequest" asp-action="Create">Fazer pedido de empréstimo</a>
+                                    </li>
+                                }
 
                             </ul>
 

@@ -19,11 +19,11 @@ namespace EmpresteFacil.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Login(string returnUrl)
+        public IActionResult Login()
         {
             return View(new LoginViewModel()
             {
-                ReturnUrl = returnUrl
+                ReturnUrl = "/Home"
             });
         }
 
@@ -69,11 +69,10 @@ namespace EmpresteFacil.Controllers
             {
                 var user = new IdentityUser { UserName = registroVM.UserName };
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
-
                 if(result.Succeeded)
                 {
                     //await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
