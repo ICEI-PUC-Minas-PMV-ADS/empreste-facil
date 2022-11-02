@@ -4,6 +4,7 @@ using EmpresteFacil.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmpresteFacil.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20221101224013_Persons02")]
+    partial class Persons02
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -326,9 +328,6 @@ namespace EmpresteFacil.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int>("Perfil")
-                        .HasColumnType("int");
-
                     b.Property<string>("Rg")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -338,6 +337,9 @@ namespace EmpresteFacil.Migrations
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
+
+                    b.Property<bool>("Tipo")
+                        .HasColumnType("bit");
 
                     b.ToTable("PessoasFisicas");
                 });

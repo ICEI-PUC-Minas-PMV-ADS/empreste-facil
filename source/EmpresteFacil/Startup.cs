@@ -16,7 +16,10 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
-        services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        
+        services.AddDbContext<DatabaseContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
         services.AddIdentity<IdentityUser, IdentityRole>(config =>
         {
             config.SignIn.RequireConfirmedAccount = false;
