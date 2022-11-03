@@ -31,12 +31,5 @@ namespace EmpresteFacil.Models.Entities
         [Display(Name = "Data de nascimento")]
         public DateTime DataNascimento { get; set; }
         
-        public Perfil Perfil { get; set; }
-    }
-
-    public enum Perfil
-    {
-        Admin,
-        User
     }
 }

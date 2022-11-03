@@ -31,9 +31,6 @@
                 @Html.DisplayNameFor(model => model.DataNascimento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Perfil)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
@@ -41,6 +38,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TelefoneFixo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perfil)
             </th>
             <th></th>
         </tr>
@@ -67,9 +70,6 @@
                 @Html.DisplayFor(modelItem => item.DataNascimento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Perfil)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
@@ -77,6 +77,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TelefoneFixo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Perfil)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.UsuarioId">Edit</a> |

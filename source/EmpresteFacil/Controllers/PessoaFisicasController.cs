@@ -10,22 +10,22 @@ using EmpresteFacil.Models.Entities;
 
 namespace EmpresteFacil.Controllers
 {
-    public class PessoasFisicasController : Controller
+    public class PessoaFisicasController : Controller
     {
         private readonly DatabaseContext _context;
 
-        public PessoasFisicasController(DatabaseContext context)
+        public PessoaFisicasController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: PessoasFisicas
+        // GET: PessoaFisicas
         public async Task<IActionResult> Index()
         {
               return View(await _context.PessoasFisicas.ToListAsync());
         }
 
-        // GET: PessoasFisicas/Details/5
+        // GET: PessoaFisicas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.PessoasFisicas == null)
@@ -43,18 +43,24 @@ namespace EmpresteFacil.Controllers
             return View(pessoaFisica);
         }
 
-        // GET: PessoasFisicas/Create
-        public IActionResult Create()
+        // GET: PessoaFisicas/Create
+        public IActionResult Create(Usuario usuario)
         {
-            return View();
+            PessoaFisica pessoafisica1 = new PessoaFisica();
+            pessoafisica1.Email = usuario.Email;
+            pessoafisica1.Celular = usuario.Celular;
+            pessoafisica1.TelefoneFixo = usuario.TelefoneFixo;
+            pessoafisica1.Senha = usuario.Senha;
+
+            return View(pessoafisica1);
         }
 
-        // POST: PessoasFisicas/Create
+        // POST: PessoaFisicas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Cpf,Nome,Sobrenome,Rg,GrauEscolaridade,DataNascimento,Perfil,UsuarioId,Email,Celular,TelefoneFixo")] PessoaFisica pessoaFisica)
+        public async Task<IActionResult> Create([Bind("Cpf,Nome,Sobrenome,Rg,GrauEscolaridade,DataNascimento,UsuarioId,Email,Celular,TelefoneFixo,Senha,Perfil")] PessoaFisica pessoaFisica)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +71,7 @@ namespace EmpresteFacil.Controllers
             return View(pessoaFisica);
         }
 
-        // GET: PessoasFisicas/Edit/5
+        // GET: PessoaFisicas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.PessoasFisicas == null)
@@ -81,12 +87,12 @@ namespace EmpresteFacil.Controllers
             return View(pessoaFisica);
         }
 
-        // POST: PessoasFisicas/Edit/5
+        // POST: PessoaFisicas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Cpf,Nome,Sobrenome,Rg,GrauEscolaridade,DataNascimento,Perfil,UsuarioId,Email,Celular,TelefoneFixo")] PessoaFisica pessoaFisica)
+        public async Task<IActionResult> Edit(int id, [Bind("Cpf,Nome,Sobrenome,Rg,GrauEscolaridade,DataNascimento,UsuarioId,Email,Celular,TelefoneFixo,Senha,Perfil")] PessoaFisica pessoaFisica)
         {
             if (id != pessoaFisica.UsuarioId)
             {
@@ -116,7 +122,7 @@ namespace EmpresteFacil.Controllers
             return View(pessoaFisica);
         }
 
-        // GET: PessoasFisicas/Delete/5
+        // GET: PessoaFisicas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.PessoasFisicas == null)
@@ -134,7 +140,7 @@ namespace EmpresteFacil.Controllers
             return View(pessoaFisica);
         }
 
-        // POST: PessoasFisicas/Delete/5
+        // POST: PessoaFisicas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
