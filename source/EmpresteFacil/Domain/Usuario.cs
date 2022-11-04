@@ -27,6 +27,7 @@ namespace EmpresteFacil.Models.Entities
 
         [Display(Name = "Senha")]
         [Required(ErrorMessage = "Insira uma senha")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
 
         public Perfil Perfil { get; set; }

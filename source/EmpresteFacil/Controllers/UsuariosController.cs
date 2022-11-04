@@ -54,10 +54,11 @@ namespace EmpresteFacil.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UsuarioId,Email,Celular,TelefoneFixo,Senha,Perfil")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("UsuarioId,Email,Celular,TelefoneFixo,Perfil, Senha")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
+                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
 
@@ -106,6 +107,7 @@ namespace EmpresteFacil.Controllers
             {
                 try
                 {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
