@@ -8,9 +8,6 @@ html {
     }
 }
 
-html {
-    min-height: 100%;
-}
 
 
 .teste {
@@ -108,14 +105,15 @@ html {
     text-align: center;
     bottom: 0;
     width: 100%;
+    height: 70px;
     padding: 5px;
 }
 
 .m-s a {
     background: #008134;
     display: inline-flex;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;

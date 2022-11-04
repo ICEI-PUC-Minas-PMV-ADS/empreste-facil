@@ -2,53 +2,71 @@
 @model EmpresteFacil.Models.Entities.Usuario
 
 @{
-    ViewData["Title"] = "Criar Conta";
+	ViewData["Title"] = "Criar Conta";
 }
 
-<h1>Criar Conta</h1>
+<div claclass="container text-center">
+	<div class="row justify-content-center align-items-center">
 
-<h4>Usuario</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Celular" class="control-label"></label>
-                <input asp-for="Celular" class="form-control" />
-                <span asp-validation-for="Celular" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TelefoneFixo" class="control-label"></label>
-                <input asp-for="TelefoneFixo" class="form-control" />
-                <span asp-validation-for="TelefoneFixo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Perfil" class="control-label"></label>
-                <select asp-for="Perfil" class="form-control" asp-items="Html.GetEnumSelectList<Perfil>()"></select>
-                <span asp-validation-for="Perfil" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+		<div class="col-4">
+			<span class="align-middle">
+				<img class="img-fluid mx-auto d-block" src="~/images/logo.png" alt="Registrar Usuário">
+			</span>
+		</div>
+
+		<div class="col-4">
+			<form asp-controller="Usuarios" asp-action="Create" method="post" class="form-horizontal" role="form">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				<div class="form-group">
+					<label asp-for="Email" class="control-label"></label>
+					<input asp-for="Email" class="form-control" />
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Celular" class="control-label"></label>
+					<input asp-for="Celular" class="form-control" />
+					<span asp-validation-for="Celular" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="TelefoneFixo" class="control-label"></label>
+					<input asp-for="TelefoneFixo" class="form-control" />
+					<span asp-validation-for="TelefoneFixo" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Senha" class="control-label"></label>
+					<input asp-for="Senha" class="form-control" />
+					<span asp-validation-for="Senha" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Perfil" class="control-label"></label>
+					<select asp-for="Perfil" class="form-control" asp-items="Html.GetEnumSelectList<Perfil>()"></select>
+					<span asp-validation-for="Perfil" class="text-danger"></span>
+				</div>
+
+				<div class="mt-4">
+					<div class="col  btn-group d-grid gap-3" role="group">
+						<input type="submit" value="Seguinte" class="btn btn-outline-success btn-lg" />
+						<a class="btn btn-outline-secondary btn-lg" asp-controller="Home" asp-action="Index">Cancelar</a>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
+
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	}
+
