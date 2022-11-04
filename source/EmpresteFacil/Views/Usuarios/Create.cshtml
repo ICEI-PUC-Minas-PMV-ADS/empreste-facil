@@ -5,6 +5,7 @@
 	ViewData["Title"] = "Criar Conta";
 }
 
+
 <div claclass="container text-center">
 	<div class="row justify-content-center align-items-center">
 
@@ -15,34 +16,35 @@
 		</div>
 
 		<div class="col-4">
+			<h1 class="mb-3">Crie sua conta</h1>
 			<form asp-controller="Usuarios" asp-action="Create" method="post" class="form-horizontal" role="form">
 				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-				<div class="form-group">
+				<div class="form-group mt-2 mb-2">
 					<label asp-for="Email" class="control-label"></label>
 					<input asp-for="Email" class="form-control" />
 					<span asp-validation-for="Email" class="text-danger"></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group mt-2 mb-2">
 					<label asp-for="Celular" class="control-label"></label>
 					<input asp-for="Celular" class="form-control" />
 					<span asp-validation-for="Celular" class="text-danger"></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group mt-2 mb-2">
 					<label asp-for="TelefoneFixo" class="control-label"></label>
 					<input asp-for="TelefoneFixo" class="form-control" />
 					<span asp-validation-for="TelefoneFixo" class="text-danger"></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group mt-2 mb-2">
 					<label asp-for="Senha" class="control-label"></label>
 					<input asp-for="Senha" class="form-control" />
 					<span asp-validation-for="Senha" class="text-danger"></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group mt-2 mb-2">
 					<label asp-for="Perfil" class="control-label"></label>
 					<select asp-for="Perfil" class="form-control" asp-items="Html.GetEnumSelectList<Perfil>()"></select>
 					<span asp-validation-for="Perfil" class="text-danger"></span>
