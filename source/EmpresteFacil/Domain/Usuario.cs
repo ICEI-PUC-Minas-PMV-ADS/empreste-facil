@@ -11,21 +11,20 @@ namespace EmpresteFacil.Models.Entities
         public int UsuarioId { get; set; }
 
         [Required(ErrorMessage = "Preencha o e-mail.")]
-        [DisplayName("Email")]
+        [DisplayName("Email*")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Preencha o telefone celular.")]
-        [DisplayName("Telefone celular")]
+        [DisplayName("Telefone celular*")]
         [DataType(DataType.PhoneNumber)]
         public string Celular { get; set; }
 
-        [Required(ErrorMessage = "Preencha o telefone fixo.")]
         [DisplayName("Telefone fixo")]
         [DataType(DataType.PhoneNumber)]
         public string TelefoneFixo { get; set; }
 
-        [Display(Name = "Senha")]
+        [Display(Name = "Senha*")]
         [Required(ErrorMessage = "Insira uma senha")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
