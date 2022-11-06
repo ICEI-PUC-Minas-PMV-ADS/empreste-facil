@@ -30,6 +30,13 @@ public class Startup
             .AddDefaultTokenProviders();
 
         services.AddDatabaseDeveloperPageExceptionFilter();
+
+        //Serviço para acessar a session
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+        //Configurando a session
+        services.AddMemoryCache();
+        services.AddSession();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -46,6 +53,9 @@ public class Startup
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
+
+        //Ativando a Session //
+        app.UseSession();
 
         app.UseRouting();
         app.UseAuthentication();

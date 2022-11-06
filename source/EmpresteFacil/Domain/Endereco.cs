@@ -6,8 +6,7 @@
 //{
 //    [Table("Endereços")]
 //    public class Endereco
-//    {
-//        [Key]
+//    {        
 //        [Required(ErrorMessage = "Informe seu endereço")]
 //        [StringLength(255, MinimumLength = 3, ErrorMessage = "O nome deve ter entre 3 e 255 caracteres.")]
 //        public string DescricaoLogradouro { get; set; }
