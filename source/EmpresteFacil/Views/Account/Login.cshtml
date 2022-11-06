@@ -1,43 +1,40 @@
 ﻿@model LoginViewModel
 
-<table class="container">
-	<tr>
-		<td><img src="~/images/logo.png" alt="Registrar Usuário"></td>
-		<td>
-			<div class="row">
-				<div class="col-10 col-md-10 col-lg-10">
-					<h4>Entrar</h4>
-					<form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal" role="form">
-						<hr />
-						<div asp-validation-summary="All" class="text-danger"></div>
-						<input type="hidden" asp-for="ReturnUrl"/>
+<div claclass="container text-center">
+	<div class="row justify-content-center align-items-center">
 
-						<div>
-							<label asp-for="UserName" class="col-md-2 control-label"></label>
-							<div class="form-group col-md-6">
-								<input asp-for="UserName" class="form-control"/>
-								<span asp-validation-for="UserName" class="text-danger"></span>
-							</div>
-						</div>
+		<div class="col-4">
+			<span class="align-middle">
+				<img class="img-fluid mx-auto d-block" src="~/images/logo.png" alt="Registrar Usuário">
+			</span>
+		</div>
 
-						<div>
-							<label asp-for="Password" class="col-md-2 control-label"></label>
-							<div class="form-group col-md-6">
-								<input asp-for="Password" class="form-control"/>
-								<span asp-validation-for="Password" class="text-danger"></span>
-							</div>
-						</div>
+		<div class="col-4">
+			<h1 class="mb-3">Entrar</h1>
+			<form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal" role="form">
+				<div asp-validation-summary="All" class="text-danger"></div>
+				<input type="hidden" asp-for="ReturnUrl" />
 
-						<div class="form-group">
-							<div class="col-md-8 mt-4 btn-group" role="group">
-								<input type="submit" class="btn btn-outline-success btn-lg" value="Log in" />
-								<a class="btn btn-outline-secondary btn-lg" asp-area="" asp-controller="Account" asp-action="Register">Registrar</a>
-							</div>
-						</div>
-
-					</form>
+				<div class="form-group mt-2 mb-2">
+					<label asp-for="UserName" class="col-md-2 control-label"></label>
+					<input asp-for="UserName" class="form-control" />
+					<span asp-validation-for="UserName" class="text-danger"></span>
 				</div>
-			</div>
-		</td>
-	</tr>
-</table>
+
+				<div class="form-group mt-2 mb-2">
+					<label asp-for="Password" class="col-md-2 control-label"></label>
+					<input asp-for="Password" class="form-control" />
+					<span asp-validation-for="Password" class="text-danger"></span>
+				</div>
+
+				<div class="mt-4">
+					<div class="col  btn-group d-grid gap-3" role="group">
+						<input type="submit" class="btn btn-outline-success btn-lg" value="Log in" />
+						<a class="btn btn-outline-secondary btn-lg" asp-area="" asp-controller="Usuarios" asp-action="Create">Não possui sua conta? Criar conta</a>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>

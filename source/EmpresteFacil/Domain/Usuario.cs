@@ -24,5 +24,18 @@ namespace EmpresteFacil.Models.Entities
         [DisplayName("Telefone fixo")]
         [DataType(DataType.PhoneNumber)]
         public string TelefoneFixo { get; set; }
+
+        [Display(Name = "Senha")]
+        [Required(ErrorMessage = "Insira uma senha")]
+        [DataType(DataType.Password)]
+        public string Senha { get; set; }
+
+        public Perfil Perfil { get; set; }
+    }
+
+    public enum Perfil 
+    {
+        Pessoa_Fisica,
+        Pessoa_Juridica
     }
 }
