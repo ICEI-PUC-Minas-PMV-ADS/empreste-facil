@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EmpresteFacil.Context;
 using EmpresteFacil.Models.Entities;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace EmpresteFacil.Controllers
 {
@@ -19,7 +21,66 @@ namespace EmpresteFacil.Controllers
             _context = context;
         }
 
+<<<<<<< HEAD
         
+=======
+
+
+
+        // Log In action By Tafarel Mello
+        public async Task<IActionResult> Login([Bind("Email, Senha")]Usuario usuario)
+        {
+            var user = await _context.Usuarios.FirstOrDefaultAsync(m => m.Email == usuario.Email);
+
+            if(user == null)
+            {
+                ViewBag.Message = "Usuário e/ou senha inválidos!";
+                return View();
+            }
+
+            bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
+
+            if (isSenhaOk)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, user.Nome),
+                    new Claim(ClaimTypes.Role, user.Perfil.ToString())
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddMinutes(10),
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                return Redirect("/");
+            }
+            else
+            {
+                ViewBag.Message = "Usuário e/ou senha inválidos!";
+                return View();
+            }
+             
+            return View();
+        }
+
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+
+
+>>>>>>> origin/Tafarel_Dev
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
@@ -56,7 +117,7 @@ namespace EmpresteFacil.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UsuarioId,Email,Celular,TelefoneFixo,Perfil, Senha")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("UsuarioId,Email,Celular,TelefoneFixo,Perfil, Senha, Nome")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {

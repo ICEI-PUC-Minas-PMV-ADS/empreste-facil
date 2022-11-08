@@ -15,9 +15,8 @@ else
 {
 	<ul class="nav navbar-nav navbar-left">
 		<div class="btn-group" role="group">
-			<a class="nav-link text-black btn btn-outline-success" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}",Context.Request.Path, Context.Request.QueryString)">Log in</a>
+			<a class="nav-link text-black btn btn-outline-success" asp-controller="Usuarios" asp-action="Login">Log in</a>
 			<a class="nav-link text-black btn btn-outline-secondary" asp-controller="Usuarios" asp-action="Create">Registro</a>
 		</div>
 	</ul>
-
 }
