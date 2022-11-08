@@ -10,6 +10,11 @@ namespace EmpresteFacil.Models.Entities
         [Key]
         public int UsuarioId { get; set; }
 
+        [Required(ErrorMessage = "Informe o nome.")]
+        [StringLength(255, MinimumLength = 3, ErrorMessage = "O nome deve ter entre 3 e 255 caracteres.")]
+        [Display(Name = "Nome")]
+        public string Nome { get; set; }
+
         [Required(ErrorMessage = "Preencha o e-mail.")]
         [DisplayName("Email")]
         [DataType(DataType.EmailAddress)]

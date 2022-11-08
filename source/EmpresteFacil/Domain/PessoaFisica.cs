@@ -10,11 +10,6 @@ namespace EmpresteFacil.Models.Entities
         [Display(Name = "CPF")]
         public string Cpf { get; set; }
 
-        [Required(ErrorMessage = "Informe o nome.")]
-        [StringLength(255, MinimumLength = 3, ErrorMessage = "O nome deve ter entre 3 e 255 caracteres.")]
-        [Display(Name = "Nome")]
-        public string Nome { get; set; }
-
         [Display(Name = "Sobrenome")]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "O sobrenome deve ter entre 3 e 255 caracteres.")]
         public string Sobrenome { get; set; }

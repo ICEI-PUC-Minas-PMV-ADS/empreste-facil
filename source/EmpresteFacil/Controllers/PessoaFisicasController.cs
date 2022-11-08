@@ -47,6 +47,7 @@ namespace EmpresteFacil.Controllers
         public IActionResult Create(Usuario usuario)
         {
             PessoaFisica pessoafisica1 = new PessoaFisica();
+            pessoafisica1.Nome = usuario.Nome;
             pessoafisica1.Email = usuario.Email;
             pessoafisica1.Celular = usuario.Celular;
             pessoafisica1.TelefoneFixo = usuario.TelefoneFixo;

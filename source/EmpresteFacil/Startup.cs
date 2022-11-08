@@ -1,4 +1,5 @@
 ﻿using EmpresteFacil.Context;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -15,10 +16,26 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddControllersWithViews();
+
         
         services.AddDbContext<DatabaseContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+        services.Configure<CookiePolicyOptions>(options =>
+        {
+            //this lambda determines whether user consent for non-essential cookies is needed for a given request.
+
+            options.CheckConsentNeeded = context => true;
+            options.MinimumSameSitePolicy = SameSiteMode.None;
+        });
+
+        services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+        {
+            options.AccessDeniedPath = "/Usuarios/AccessDenied";
+            options.LoginPath = "/Usuarios/Login";
+        });
+
+
 
         services.AddIdentity<IdentityUser, IdentityRole>(config =>
         {
@@ -29,8 +46,13 @@ public class Startup
             .AddEntityFrameworkStores<DatabaseContext>()
             .AddDefaultTokenProviders();
 
+
+        services.AddControllersWithViews();
+
         services.AddDatabaseDeveloperPageExceptionFilter();
     }
+
+
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
@@ -50,6 +72,7 @@ public class Startup
         app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
+        app.UseCookiePolicy();
 
         app.UseEndpoints(endpoints =>
         {

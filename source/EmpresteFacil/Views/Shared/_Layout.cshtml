@@ -43,20 +43,14 @@
 								<li class="nav-item">
 									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Ajuda</a>
 								</li>
-								@if (SignInManager.IsSignedIn(User))
-								{
-									<li class="nav-item">
-										<a class="nav-link text-dark" asp-area="" asp-controller="LoanRequest" asp-action="Create">Fazer pedido de empréstimo</a>
-									</li>
-								}
 
 							</ul>
-
 						</div>
 
 						<div class="d-flex">
-							<partial name="_LoginPartial" />
+							<partial name="_LoginPartial"/>
 						</div>
+
 					</div>
 
 				</div>
