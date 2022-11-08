@@ -21,9 +21,6 @@ namespace EmpresteFacil.Controllers
             _context = context;
         }
 
-<<<<<<< HEAD
-        
-=======
 
 
 
@@ -80,7 +77,6 @@ namespace EmpresteFacil.Controllers
 
 
 
->>>>>>> origin/Tafarel_Dev
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
