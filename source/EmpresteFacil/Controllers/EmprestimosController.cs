@@ -60,8 +60,15 @@ namespace EmpresteFacil.Controllers
             {
                 _context.Add(emprestimo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
+                ViewBag.CalcularParcela = teste;
+
+                //return RedirectToAction("Create", "Parcelas", teste);
+                return RedirectToRoute(new { controller = "Parcelas", action = "Create", id = teste });
+                //return RedirectToAction(nameof(Index));
             }
+            
             return View(emprestimo);
         }
 

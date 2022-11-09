@@ -16,7 +16,7 @@ namespace EmpresteFacil.Models.Entities
         [Column(TypeName = "decimal(10,2)")]
         public double ValorTotalEmprestimo { get; set; }
         
-        [Display(Name = "Valor da parcela")]
+        [Display(Name = "Número de parcelas")]
         public int NumeroParcelas { get; set; }
         
         [Display(Name = "Taxa de juros")]
@@ -27,6 +27,29 @@ namespace EmpresteFacil.Models.Entities
         [Display(Name = "Data de início do empréstimo")]
         public DateTime DataInicioEmprestimo { get; set; }
         List<Parcelas> Parcelas { get; set; }
+
+
+        public double CalculoDeParcelas (double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
+        {
+            // Formula: PMT = [PV. (1 + i) ^ n] i / [(1 + i) ^ n - 1]
+            return (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros) / (Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
+        }
+
+        public double CalculaValorDosJuros(double TaxaJuros, double SaldoDevedor)
+        {
+            return TaxaJuros / 100 * ValorTotalEmprestimo;
+        }
+
+        //        public void CalculaTabelaPrice(double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
+        //{
+        //    double PMT = CalculoDeParcelas(ValorTotalEmprestimo, NumeroParcelas, TaxaJuros)
+
+        //    double ValorJuros = TaxaJuros / 100 * ValorTotalEmprestimo;
+        //    double Amortizacao = ;
+        //    double SaldoDevedorParcelas = ValorTotalEmprestimo + ValorJuros - PMT;
+        //}
+
+
 
         //private readonly DatabaseContext _context;
 
