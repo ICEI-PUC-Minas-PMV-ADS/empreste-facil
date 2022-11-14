@@ -4,6 +4,7 @@ using EmpresteFacil.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmpresteFacil.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20221106140748_Emprestimo")]
+    partial class Emprestimo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,45 +47,6 @@ namespace EmpresteFacil.Migrations
                     b.HasKey("EmprestimoId");
 
                     b.ToTable("Emprestimos");
-                });
-
-            modelBuilder.Entity("EmpresteFacil.Models.Entities.Parcelas", b =>
-                {
-                    b.Property<int>("ParcelaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ParcelaId"), 1L, 1);
-
-                    b.Property<decimal>("Amortizacao")
-                        .HasColumnType("decimal(10,2)");
-
-                    b.Property<DateTime>("DataPagamento")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataVencimentoParcela")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("EmprestimoId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Juros")
-                        .HasColumnType("decimal(4,2)");
-
-                    b.Property<int>("StatusParcela")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("ValorMulta")
-                        .HasColumnType("decimal(10,2)");
-
-                    b.Property<decimal>("ValorParcela")
-                        .HasColumnType("decimal(10,2)");
-
-                    b.HasKey("ParcelaId");
-
-                    b.HasIndex("EmprestimoId");
-
-                    b.ToTable("Parcelas");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.Entities.Usuario", b =>
@@ -131,30 +94,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Installments", (string)null);
-                });
-
-            modelBuilder.Entity("EmpresteFacil.Models.Loan", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("ApproverId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LoanRequestId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Loan", (string)null);
+                    b.ToTable("Installments");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.LoanRequest", b =>
@@ -164,9 +104,6 @@ namespace EmpresteFacil.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<bool>("Approved")
-                        .HasColumnType("bit");
 
                     b.Property<DateTime?>("ApprovedAt")
                         .HasColumnType("datetime2");
@@ -180,7 +117,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LoanRequests", (string)null);
+                    b.ToTable("LoanRequests");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.Score", b =>
@@ -200,7 +137,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Scores", (string)null);
+                    b.ToTable("Scores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -454,17 +391,6 @@ namespace EmpresteFacil.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.ToTable("PessoasJuridicas");
-                });
-
-            modelBuilder.Entity("EmpresteFacil.Models.Entities.Parcelas", b =>
-                {
-                    b.HasOne("EmpresteFacil.Models.Entities.Emprestimo", "Emprestimo")
-                        .WithMany()
-                        .HasForeignKey("EmprestimoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Emprestimo");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

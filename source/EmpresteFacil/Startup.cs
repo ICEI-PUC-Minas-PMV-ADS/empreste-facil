@@ -16,7 +16,10 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
-        services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        
+        services.AddDbContext<DatabaseContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
         services.AddIdentity<IdentityUser, IdentityRole>(config =>
         {
             config.SignIn.RequireConfirmedAccount = false;
@@ -27,6 +30,13 @@ public class Startup
             .AddDefaultTokenProviders();
 
         services.AddDatabaseDeveloperPageExceptionFilter();
+
+        //Serviço para acessar a session
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+        //Configurando a session
+        services.AddMemoryCache();
+        services.AddSession();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,6 +53,9 @@ public class Startup
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
+
+        //Ativando a Session //
+        app.UseSession();
 
         app.UseRouting();
         app.UseAuthentication();

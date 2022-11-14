@@ -1,5 +1,6 @@
 html {
     font-size: 14px;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,9 +9,14 @@ html {
     }
 }
 
-html {
+body {
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+ footer {
+     margin-top: auto;
+ }
 
 
 .teste {
@@ -106,7 +112,6 @@ html {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    bottom: 0;
     width: 100%;
     padding: 5px;
 }
@@ -114,8 +119,8 @@ html {
 .m-s a {
     background: #008134;
     display: inline-flex;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;

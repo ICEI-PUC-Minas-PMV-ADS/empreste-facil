@@ -4,6 +4,7 @@ using EmpresteFacil.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmpresteFacil.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20221106152946_controlersEmprestimo")]
+    partial class controlersEmprestimo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -131,30 +133,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Installments", (string)null);
-                });
-
-            modelBuilder.Entity("EmpresteFacil.Models.Loan", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("ApproverId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LoanRequestId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Loan", (string)null);
+                    b.ToTable("Installments");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.LoanRequest", b =>
@@ -164,9 +143,6 @@ namespace EmpresteFacil.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<bool>("Approved")
-                        .HasColumnType("bit");
 
                     b.Property<DateTime?>("ApprovedAt")
                         .HasColumnType("datetime2");
@@ -180,7 +156,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LoanRequests", (string)null);
+                    b.ToTable("LoanRequests");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.Score", b =>
@@ -200,7 +176,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Scores", (string)null);
+                    b.ToTable("Scores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
