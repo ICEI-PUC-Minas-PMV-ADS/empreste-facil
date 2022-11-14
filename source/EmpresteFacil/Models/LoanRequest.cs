@@ -15,5 +15,9 @@ namespace EmpresteFacil.Models
         [Required]
         [Display(Name = "Valor do empréstimo")]
         public decimal Value { get; set; }
+
+        [Required]
+        [Display(Name = "Status do empréstimo")]
+        public bool Approved { get; set; } = false;
     }
 }

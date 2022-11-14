@@ -15,6 +15,8 @@ namespace EmpresteFacil.Context
         public DbSet<Installment>? Installments { get; set; }
         public DbSet<LoanRequest>? LoanRequests { get; set; }
         public DbSet<Score>? Scores { get; set; }
+        public DbSet<EmpresteFacil.Models.Loan> Loan { get; set; }
+        public DbSet<EmpresteFacil.Models.UserData> UserData { get; set; }
 
         //public DbSet<Emprestimo> Emprestimos { get; set; }
         //public DbSet<Parcelas> Parcelas { get; set; }

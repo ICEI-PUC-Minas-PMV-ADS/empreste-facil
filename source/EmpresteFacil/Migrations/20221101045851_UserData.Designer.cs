@@ -4,6 +4,7 @@ using EmpresteFacil.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmpresteFacil.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20221101045851_UserData")]
+    partial class UserData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +37,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Installments", (string)null);
+                    b.ToTable("Installments");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.Loan", b =>
@@ -58,7 +60,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Loan", (string)null);
+                    b.ToTable("Loan");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.LoanRequest", b =>
@@ -84,7 +86,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LoanRequests", (string)null);
+                    b.ToTable("LoanRequests");
                 });
 
             modelBuilder.Entity("EmpresteFacil.Models.Score", b =>
@@ -104,7 +106,7 @@ namespace EmpresteFacil.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Scores", (string)null);
+                    b.ToTable("Scores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
