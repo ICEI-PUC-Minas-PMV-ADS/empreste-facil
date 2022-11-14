@@ -12,56 +12,43 @@
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/EmpresteFacil.styles.css" asp-append-version="true" />
 </head>
-<body class="">
-	<header class="container-fluid border-bottom border-success">
-		<div class="mx-wid-cont">
-			<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom">
 
-				<div class="container-fluid">
+<body class="container">
 
-					<img class="img-logo" src="~/images/logo.png" alt="Logo Empreste Fácil">
-
-					<a class="navbar-brand ms-3 me-4" asp-area="" asp-controller="Home" asp-action="Index"> Empreste Fácil </a>
-
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-							aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="navbar-collapse collapse">
-
-						<div class="d-flex justify-content-start me-4">
-
-							<ul class="navbar-nav flex-grow-1">
-
-								<li class="nav-item">
-									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HowItWorks">Como Funciona?</a>
-								</li>
-									<li class="nav-item">
-									<a class="nav-link text-dark" asp-area="" asp-controller="Emprestimos" asp-action="Index">Solicitar empréstimo</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WhoWeAre">Quem somos</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Ajuda</a>
-								</li>
-
-							</ul>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+			<div class="container-fluid text-center teste">
+				<img class="img-logo navbar-brand" src="~/images/logo.png" alt="Logo Empreste Fácil">
+				<a class="navbar-brand ms-3 me-4" asp-area="" asp-controller="Home" asp-action="Index"> Empreste Fácil </a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between teste">
+					<ul class="navbar-nav flex-grow-1">
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HowItWorks">Como Funciona?</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WhoWeAre">Quem somos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Ajuda</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav flex-grow-1 justify-content-end teste">
+						<div class="btn-group" role="group">
+							<a class="nav-link text-black btn btn-outline-success" asp-controller="Usuarios" asp-action="Login">Log in</a>
+							<a class="nav-link text-black btn btn-outline-secondary" asp-controller="Usuarios" asp-action="Create">Registro</a>
 						</div>
-
-						<div class="d-flex">
-							<partial name="_LoginPartial"/>
-						</div>
-
-					</div>
-
+					</ul>
 				</div>
-
-			</nav>
-		</div>
+			</div>
+		</nav>
 
 	</header>
+
+
 	<main role="main" class="mt-5 mb-5">
 		@RenderBody()
 	</main>

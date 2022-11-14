@@ -1,4 +1,5 @@
 ﻿using EmpresteFacil.ViewModels;
+using EmpresteFacil.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -8,11 +9,11 @@ namespace EmpresteFacil.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager; 
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager, 
-            SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager,
+        SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -38,8 +39,8 @@ namespace EmpresteFacil.Controllers
 
             if (user != null)
             {
-                var result = await _signInManager.PasswordSignInAsync(user, 
-                    loginVM.Password, false, false);
+                var result = await _signInManager.PasswordSignInAsync(user,
+                loginVM.Password, false, false);
 
                 if (result.Succeeded)
                 {
@@ -52,7 +53,7 @@ namespace EmpresteFacil.Controllers
             }
             ModelState.AddModelError("", "Falha ao realizar o login!!");
             return View(loginVM);
-        }//
+        }
 
         [AllowAnonymous]
         public IActionResult Register()
@@ -65,31 +66,31 @@ namespace EmpresteFacil.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(LoginViewModel registroVM)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = registroVM.UserName };
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
-                if(result.Succeeded)
+                if (result.Succeeded)
                 {
-                    //await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    // return RedirectToAction("Index", "Home");
                 }
                 else
                 {
                     this.ModelState.AddModelError("Registro", "Falha ao registrar o usuário");
                 }
             }
-            return View(registroVM);    
+            return View(registroVM);
         }
 
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
-            //HttpContext.Session.Clear();
+            HttpContext.Session.Clear();
             HttpContext.User = null;
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
     }
 }
