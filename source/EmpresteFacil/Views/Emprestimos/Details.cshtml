@@ -36,6 +36,59 @@
         </dd>
     </dl>
 </div>
+
+<div>
+
+    <table class="table table-dordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Parcela</th>
+                <th>Juros mensal</th>
+                <th>Amortização principal</th>
+                <th>Amortização Total</th>
+                <th>Saldo devedor</th>
+
+            </tr>
+        </thead>
+        @{
+            double capital = Model.ValorTotalEmprestimo;
+            double juros = Model.TaxaJuros / 1200;
+            double prazo = Convert.ToDouble(Model.NumeroParcelas);
+
+            //Formula pra gerar número  de parcela
+            double parcela = capital * (juros / (double)(1 - Math.Pow(1 + (double)juros, -prazo)));
+            double jurosMensal = 0;
+            double amortizacao = 0;
+            double amortizacaoTotal = 0;
+
+            int i = 1;
+
+            for (i = 1; i <= prazo; i++)
+            {
+                jurosMensal = Math.Round((juros * capital), 2);
+                capital = Math.Round(capital - parcela + jurosMensal);
+
+                // Amortização total e principal
+                amortizacaoTotal += Math.Round(parcela - jurosMensal, 2);
+                amortizacao = parcela - jurosMensal;
+
+                <tbody>
+                    <tr>
+                        <td>@i</td>
+                        <td>@Math.Round(parcela, MidpointRounding.AwayFromZero)</td>
+                        <td>@Math.Round(jurosMensal, MidpointRounding.AwayFromZero)</td>
+                        <td>@Math.Round(amortizacao, MidpointRounding.AwayFromZero)</td>
+                        <td>@Math.Round(amortizacaoTotal, MidpointRounding.AwayFromZero)</td>
+                        <td>@Math.Round(capital, MidpointRounding.AwayFromZero)</td>
+                    </tr>
+                </tbody>
+            }
+        }
+    </table>
+</div>
+
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.EmprestimoId">Edit</a> |
     <a asp-action="Index">Back to List</a>

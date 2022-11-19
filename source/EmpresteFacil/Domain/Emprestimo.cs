@@ -18,27 +18,61 @@ namespace EmpresteFacil.Models.Entities
         
         [Display(Name = "Número de parcelas")]
         public int NumeroParcelas { get; set; }
-        
+
         [Display(Name = "Taxa de juros")]
         [Column(TypeName = "decimal(4,2)")]
-        public double TaxaJuros { get; set; }
+        public double TaxaJuros { get; set; } 
         
         [DataType(DataType.DateTime)]
         [Display(Name = "Data de início do empréstimo")]
         public DateTime DataInicioEmprestimo { get; set; }
+
+        [Column(TypeName = "decimal(10,2)")]
+        public double ValorParcelaCalculada { get; set; }
+
         List<Parcelas> Parcelas { get; set; }
+
+        public Emprestimo()
+        {
+
+        }
+
+        public Emprestimo(double valorTotalEmprestimo, int numeroParcelas, double taxaJuros)
+        {
+            ValorTotalEmprestimo = valorTotalEmprestimo;
+            NumeroParcelas = numeroParcelas;
+            TaxaJuros = taxaJuros;
+        }
+
+        public Emprestimo NovoEmprestimoSimulado(double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
+        {
+            var EmprestimoSimulado = new Emprestimo(ValorTotalEmprestimo, NumeroParcelas, TaxaJuros);
+            return EmprestimoSimulado;
+        }
+
+        public static double SimuladorNovo(Emprestimo emprestimoNovo)
+        {
+            double ValorTotalEmprestimo = emprestimoNovo.ValorTotalEmprestimo;
+            double NumeroParcelas = emprestimoNovo.NumeroParcelas;
+            double TaxaJuros = emprestimoNovo.TaxaJuros;
+
+            double parcela = (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros)/(Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
+            return parcela;
+        }
 
 
         public double CalculoDeParcelas (double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
         {
-            // Formula: PMT = [PV. (1 + i) ^ n] i / [(1 + i) ^ n - 1]
-            return (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros) / (Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
+        // Formula: PMT = [PV. (1 + i) ^ n] i / [(1 + i) ^ n - 1]
+                
+        return (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros) / (Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
         }
 
         public double CalculaValorDosJuros(double TaxaJuros, double SaldoDevedor)
         {
             return TaxaJuros / 100 * ValorTotalEmprestimo;
         }
+
 
         //        public void CalculaTabelaPrice(double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
         //{

@@ -164,5 +164,19 @@ namespace EmpresteFacil.Controllers
         {
           return _context.Emprestimos.Any(e => e.EmprestimoId == id);
         }
+
+        // Simulando um empréstimo
+        //public IActionResult CalculoDeParcelas(int id)
+        //{
+        //    return View(Emprestimo.);
+        //}
+
+        public IActionResult Simulacao()
+        {
+            Emprestimo Emprestimo = new Emprestimo();
+            Emprestimo.ValorParcelaCalculada = Emprestimo.CalculoDeParcelas(Emprestimo.ValorTotalEmprestimo, Emprestimo.NumeroParcelas, Emprestimo.TaxaJuros);
+            return View(Emprestimo);
+        }
+
     }
 }
