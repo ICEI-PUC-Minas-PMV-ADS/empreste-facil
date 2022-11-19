@@ -61,11 +61,11 @@ namespace EmpresteFacil.Controllers
                 _context.Add(emprestimo);
                 await _context.SaveChangesAsync();
 
-                var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
-                ViewBag.CalcularParcela = teste;
+                //var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
+                //ViewBag.CalcularParcela = teste;
 
                 //return RedirectToAction("Create", "Parcelas", teste);
-                return RedirectToRoute(new { controller = "Parcelas", action = "Create", id = teste });
+                return RedirectToRoute(new { controller = "Emprestimos", action = "Details", id = emprestimo.EmprestimoId});
                 //return RedirectToAction(nameof(Index));
             }
             
@@ -171,12 +171,8 @@ namespace EmpresteFacil.Controllers
         //    return View(Emprestimo.);
         //}
 
-        public IActionResult Simulacao()
-        {
-            Emprestimo Emprestimo = new Emprestimo();
-            Emprestimo.ValorParcelaCalculada = Emprestimo.CalculoDeParcelas(Emprestimo.ValorTotalEmprestimo, Emprestimo.NumeroParcelas, Emprestimo.TaxaJuros);
-            return View(Emprestimo);
-        }
+        //public IActionResult Simulacao()
+
 
     }
 }
