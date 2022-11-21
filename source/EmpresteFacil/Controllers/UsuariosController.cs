@@ -65,8 +65,6 @@ namespace EmpresteFacil.Controllers
                 ViewBag.Message = "Usuário e/ou senha inválidos!";
                 return View();
             }
-             
-             return View();
         }
 
 
@@ -77,8 +75,6 @@ namespace EmpresteFacil.Controllers
 
 
 
-
-        
 
         // GET: Usuarios
         public async Task<IActionResult> Index()

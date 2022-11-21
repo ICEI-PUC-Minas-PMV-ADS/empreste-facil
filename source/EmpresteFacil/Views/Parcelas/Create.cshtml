@@ -1,7 +1,8 @@
-﻿@model Parcelas
+﻿@model EmpresteFacil.Models.Parcelas
 
 @{
     ViewData["Title"] = "Create";
+    var url = @Context.Request.Path.Value.Split('/');   
 }
 
 <h1>Create</h1>
@@ -13,8 +14,9 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ValorParcela" class="control-label"></label>
-                <input asp-for="ValorParcela" class="form-control" />
+                <p>Valor da parcela:</p>
+                <label asp-for="ValorParcela" class="control-label">@url[3]</label>
+                @*<input asp-for="ValorParcela" class="form-control"/>*@
                 <span asp-validation-for="ValorParcela" class="text-danger"></span>
             </div>
             <div class="form-group">

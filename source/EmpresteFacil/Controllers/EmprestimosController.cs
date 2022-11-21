@@ -55,8 +55,15 @@ namespace EmpresteFacil.Controllers
             {
                 _context.Add(emprestimo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                //var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
+                //ViewBag.CalcularParcela = teste;
+
+                //return RedirectToAction("Create", "Parcelas", teste);
+                return RedirectToRoute(new { controller = "Emprestimos", action = "Details", id = emprestimo.EmprestimoId});
+                //return RedirectToAction(nameof(Index));
             }
+            
             return View(emprestimo);
         }
 
@@ -158,5 +165,15 @@ namespace EmpresteFacil.Controllers
             // Formula: PMT = [PV. (1 + i) ^ n] i / [(1 + i) ^ n - 1]
             return (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros) / (Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
         }
+
+        // Simulando um empréstimo
+        //public IActionResult CalculoDeParcelas(int id)
+        //{
+        //    return View(Emprestimo.);
+        //}
+
+        //public IActionResult Simulacao()
+
+
     }
 }
