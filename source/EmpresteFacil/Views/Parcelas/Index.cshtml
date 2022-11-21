@@ -1,0 +1,77 @@
+﻿@model IEnumerable<EmpresteFacil.Models.Parcelas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorParcela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataVencimentoParcela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Juros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amortizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataPagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorMulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusParcela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emprestimo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorParcela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVencimentoParcela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Juros)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amortizacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPagamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorMulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusParcela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emprestimo.EmprestimoId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ParcelaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ParcelaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ParcelaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
