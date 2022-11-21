@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EmpresteFacil.Context;
-using EmpresteFacil.Models.Entities;
+using EmpresteFacil.Models;
 
 namespace EmpresteFacil.Controllers
 {

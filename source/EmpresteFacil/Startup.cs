@@ -1,4 +1,5 @@
 ﻿using EmpresteFacil.Context;
+using EmpresteFacil.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -17,8 +18,8 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
 
-        
-        services.AddDbContext<DatabaseContext>(options => 
+
+        services.AddDbContext<DatabaseContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
         services.Configure<CookiePolicyOptions>(options =>
@@ -51,17 +52,16 @@ public class Startup
 
         services.AddDatabaseDeveloperPageExceptionFilter();
 
-        //Serviço para acessar a session
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
-        //Configurando a session
         services.AddMemoryCache();
         services.AddSession();
     }
 
 
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISeedUserRoleInitial seedUserRoleInitial)
     {
         if (env.IsDevelopment())
         {
@@ -76,7 +76,10 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
-        //Ativando a Session //
+
+        seedUserRoleInitial.SeedRoles();
+        seedUserRoleInitial.SeedUsers();
+
         app.UseSession();
 
         app.UseRouting();
@@ -86,6 +89,11 @@ public class Startup
 
         app.UseEndpoints(endpoints =>
         {
+
+            endpoints.MapControllerRoute(
+             name: "areas",
+             pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+
             endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

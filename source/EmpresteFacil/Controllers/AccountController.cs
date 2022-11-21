@@ -1,5 +1,4 @@
-﻿using EmpresteFacil.ViewModels;
-using EmpresteFacil.ViewModels;
+﻿using EmpresteFacil.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -61,6 +60,12 @@ namespace EmpresteFacil.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Success()
+        {
+            return View();
+        }
+
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -73,7 +78,7 @@ namespace EmpresteFacil.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    // return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Success", "Account");
                 }
                 else
                 {
@@ -88,9 +93,14 @@ namespace EmpresteFacil.Controllers
         public async Task<IActionResult> Logout()
         {
             HttpContext.Session.Clear();
-            HttpContext.User = null;
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }
