@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EmpresteFacil.Models.Entities
+namespace EmpresteFacil.Models
 {
     [Table("PessoasFisicas")]
     public class PessoaFisica : Usuario

@@ -14,14 +14,14 @@ namespace EmpresteFacil.Models
 
         [Display(Name = "Valor do empréstimo")]
         //[Column(TypeName = "decimal(10,2)")]
-        public decimal ValorTotalEmprestimo { get; set; }
+        public double ValorTotalEmprestimo { get; set; }
 
         [Display(Name = "Valor da parcela")]
-        public int NumeroParcelas { get; set; }
+        public double NumeroParcelas { get; set; }
 
         [Display(Name = "Taxa de juros")]
         //[Column(TypeName = "decimal(4,2)")]
-        public decimal TaxaJuros { get; set; }
+        public double TaxaJuros { get; set; }
 
         //[DataType(DataType.DateTime)]
         //[Display(Name = "Data de início do empréstimo")]

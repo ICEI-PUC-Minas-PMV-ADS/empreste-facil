@@ -65,8 +65,6 @@ namespace EmpresteFacil.Controllers
                 ViewBag.Message = "Usuário e/ou senha inválidos!";
                 return View();
             }
-             
-             return View();
         }
 
 
