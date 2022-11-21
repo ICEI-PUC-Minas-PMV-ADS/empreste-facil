@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EmpresteFacil.Context;
-using EmpresteFacil.Models.Entities;
+using EmpresteFacil.Models;
 
 namespace EmpresteFacil.Controllers
 {
@@ -22,7 +17,7 @@ namespace EmpresteFacil.Controllers
         // GET: Emprestimes
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Emprestimos.ToListAsync());
+            return View(await _context.Emprestimos.ToListAsync());
         }
 
         // GET: Emprestimes/Details/5
@@ -148,14 +143,20 @@ namespace EmpresteFacil.Controllers
             {
                 _context.Emprestimos.Remove(emprestimo);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool EmprestimoExists(int id)
         {
-          return _context.Emprestimos.Any(e => e.EmprestimoId == id);
+            return _context.Emprestimos.Any(e => e.EmprestimoId == id);
+        }
+
+        public double CalculoDeParcelas(double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
+        {
+            // Formula: PMT = [PV. (1 + i) ^ n] i / [(1 + i) ^ n - 1]
+            return (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros) / (Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
         }
     }
 }

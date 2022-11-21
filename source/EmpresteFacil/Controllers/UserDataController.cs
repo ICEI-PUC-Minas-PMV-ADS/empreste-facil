@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EmpresteFacil.Context;
 using EmpresteFacil.Models;
@@ -19,10 +14,10 @@ namespace EmpresteFacil.Controllers
             _context = context;
         }
 
-        // GET: UserData
+        //GET: UserData
         public async Task<IActionResult> Index()
         {
-              return View(await _context.UserData.ToListAsync());
+            return View(await _context.UserData.ToListAsync());
         }
 
         // GET: UserData/Details/5
@@ -148,14 +143,14 @@ namespace EmpresteFacil.Controllers
             {
                 _context.UserData.Remove(userData);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool UserDataExists(int id)
         {
-          return _context.UserData.Any(e => e.Id == id);
+            return _context.UserData.Any(e => e.Id == id);
         }
     }
 }

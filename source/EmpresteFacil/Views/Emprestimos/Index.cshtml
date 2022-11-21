@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EmpresteFacil.Models.Entities.Emprestimo>
+﻿@model Emprestimo
 
 @{
     ViewData["Title"] = "Index";
@@ -21,33 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.TaxaJuros)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataInicioEmprestimo)
-            </th>
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorTotalEmprestimo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroParcelas)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TaxaJuros)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataInicioEmprestimo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.EmprestimoId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EmprestimoId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EmprestimoId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
 </table>
