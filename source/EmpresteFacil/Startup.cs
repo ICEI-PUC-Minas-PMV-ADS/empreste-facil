@@ -1,4 +1,6 @@
 ﻿using EmpresteFacil.Context;
+using EmpresteFacil.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -15,8 +17,27 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddControllersWithViews();
-        services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+        services.AddDbContext<DatabaseContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+        services.Configure<CookiePolicyOptions>(options =>
+        {
+            //this lambda determines whether user consent for non-essential cookies is needed for a given request.
+
+            options.CheckConsentNeeded = context => true;
+            options.MinimumSameSitePolicy = SameSiteMode.None;
+        });
+
+        services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+        {
+            options.AccessDeniedPath = "/Usuarios/AccessDenied";
+            options.LoginPath = "/Usuarios/Login";
+        });
+
+
+
         services.AddIdentity<IdentityUser, IdentityRole>(config =>
         {
             config.SignIn.RequireConfirmedAccount = false;
@@ -26,10 +47,21 @@ public class Startup
             .AddEntityFrameworkStores<DatabaseContext>()
             .AddDefaultTokenProviders();
 
+
+        services.AddControllersWithViews();
+
         services.AddDatabaseDeveloperPageExceptionFilter();
+
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
+        services.AddMemoryCache();
+        services.AddSession();
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
+
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISeedUserRoleInitial seedUserRoleInitial)
     {
         if (env.IsDevelopment())
         {
@@ -44,12 +76,24 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
+
+        seedUserRoleInitial.SeedRoles();
+        seedUserRoleInitial.SeedUsers();
+
+        app.UseSession();
+
         app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
+        app.UseCookiePolicy();
 
         app.UseEndpoints(endpoints =>
         {
+
+            endpoints.MapControllerRoute(
+             name: "areas",
+             pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+
             endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
