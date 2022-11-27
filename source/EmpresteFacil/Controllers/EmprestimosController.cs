@@ -2,22 +2,27 @@
 using Microsoft.EntityFrameworkCore;
 using EmpresteFacil.Context;
 using EmpresteFacil.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 
 namespace EmpresteFacil.Controllers
 {
     public class EmprestimosController : Controller
     {
         private readonly DatabaseContext _context;
+        private readonly UserManager<Usuario> _userManager;
 
-        public EmprestimosController(DatabaseContext context)
+        public EmprestimosController(DatabaseContext context, UserManager<Usuario> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Emprestimes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Emprestimos.ToListAsync());
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return View(await _context.Emprestimos.Where(e => e.UserId == userId.ToString()).ToListAsync());
         }
 
         // GET: Emprestimes/Details/5
@@ -49,22 +54,19 @@ namespace EmpresteFacil.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmprestimoId,ValorTotalEmprestimo,NumeroParcelas,TaxaJuros,DataInicioEmprestimo")] Emprestimo emprestimo)
+        public async Task<IActionResult> Create([Bind("ValorTotalEmprestimo,NumeroParcelas,TaxaJuros,DataInicioEmprestimo")] Emprestimo emprestimo)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(emprestimo);
-                await _context.SaveChangesAsync();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            emprestimo.UserId = userId.ToString();
+            _context.Add(emprestimo);
+            await _context.SaveChangesAsync();
 
-                //var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
-                //ViewBag.CalcularParcela = teste;
+            //var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
+            //ViewBag.CalcularParcela = teste;
 
-                //return RedirectToAction("Create", "Parcelas", teste);
-                return RedirectToRoute(new { controller = "Emprestimos", action = "Details", id = emprestimo.EmprestimoId});
-                //return RedirectToAction(nameof(Index));
-            }
-            
-            return View(emprestimo);
+            //return RedirectToAction("Create", "Parcelas", teste);
+            return RedirectToRoute(new { controller = "Emprestimos", action = "Details", id = emprestimo.EmprestimoId });
+            //return RedirectToAction(nameof(Index));
         }
 
         // GET: Emprestimes/Edit/5

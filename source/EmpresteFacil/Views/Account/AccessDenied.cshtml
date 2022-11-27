@@ -1,8 +1,15 @@
-﻿<div class="container">
+﻿@{
+    ViewData["Title"] = "Acesso negado!";
+}
+
+<div class="container">
     <div class="jumbotron">
         <p>
-           <h2>Acesso não autorizado</h2>
+            <h1>Desculpe, parece que você não tem acesso a este conteúdo!</h1>
         </p>
     </div>
-    <a asp-area="" asp-controller="Home" asp-action="Index">Volta a Home Page</a>
+    <a asp-area="" asp-controller="Home" asp-action="Index">Volta ao início</a>
 </div>
+
+
+
