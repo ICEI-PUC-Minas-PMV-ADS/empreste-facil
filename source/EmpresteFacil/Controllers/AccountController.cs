@@ -8,11 +8,11 @@ namespace EmpresteFacil.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<Usuario> _userManager;
+        private readonly SignInManager<Usuario> _signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager,
-        SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<Usuario> userManager,
+        SignInManager<Usuario> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -69,11 +69,11 @@ namespace EmpresteFacil.Controllers
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(LoginViewModel registroVM)
+        public async Task<IActionResult> Register(RegistroViewModel registroVM)
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = registroVM.UserName };
+                var user = new Usuario { UserName = registroVM.UserName, Nome = registroVM.Nome, Perfil = registroVM.Perfil, TelefoneFixo = registroVM.TelefoneFixo, Email = registroVM.Email, EmailConfirmed = true  };
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
                 if (result.Succeeded)
                 {

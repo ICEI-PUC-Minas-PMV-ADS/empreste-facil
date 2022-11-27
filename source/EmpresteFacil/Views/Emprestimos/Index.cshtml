@@ -1,27 +1,29 @@
-﻿@model EmpresteFacil.Models.Emprestimo
+﻿@model List<EmpresteFacil.Models.Emprestimo>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Meus empréstimos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Pedir um novo empréstimo</a>
 </p>
 <table class="table">
     <thead>
+        @foreach(var item in Model){
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ValorTotalEmprestimo)
+                @Html.DisplayNameFor(model => item.ValorTotalEmprestimo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NumeroParcelas)
+                    @Html.DisplayNameFor(model => item.NumeroParcelas)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TaxaJuros)
+                    @Html.DisplayNameFor(model => item.TaxaJuros)
             </th>
             <th></th>
         </tr>
+        }
     </thead>
 </table>

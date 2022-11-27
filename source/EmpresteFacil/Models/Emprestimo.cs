@@ -23,6 +23,8 @@ namespace EmpresteFacil.Models
         //[Column(TypeName = "decimal(4,2)")]
         public double TaxaJuros { get; set; }
 
+        public string UserId { get; set; }
+
         //[DataType(DataType.DateTime)]
         //[Display(Name = "Data de início do empréstimo")]
         //public DateTime DataInicioEmprestimo { get; set; }
