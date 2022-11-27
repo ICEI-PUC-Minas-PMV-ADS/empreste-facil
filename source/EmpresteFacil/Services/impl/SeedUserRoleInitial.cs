@@ -1,14 +1,15 @@
-﻿using EmpresteFacil.Services;
+﻿using EmpresteFacil.Models;
+using EmpresteFacil.Services;
 using Microsoft.AspNetCore.Identity;
 
 namespace EmpresteFacil.Services
 {
     public class SeedUserRoleInitial : ISeedUserRoleInitial
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<Usuario> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public SeedUserRoleInitial(UserManager<IdentityUser> userManager,
+        public SeedUserRoleInitial(UserManager<Usuario> userManager,
             RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
@@ -37,7 +38,7 @@ namespace EmpresteFacil.Services
         {
             if (_userManager.FindByEmailAsync("usuario@localhost").Result == null)
             {
-                IdentityUser user = new IdentityUser();
+                Usuario user = new Usuario();
                 user.UserName = "usuario@localhost";
                 user.Email = "usuario@localhost";
                 user.NormalizedUserName = "USUARIO@LOCALHOST";
@@ -45,8 +46,9 @@ namespace EmpresteFacil.Services
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
-
-                IdentityResult result = _userManager.CreateAsync(user, "Numsey#2022").Result;
+                user.Nome = "Usuario de Teste";
+                user.TelefoneFixo = "3233310000";
+                IdentityResult result = _userManager.CreateAsync(user, "Usuario@2022").Result;
 
                 if (result.Succeeded)
                 {
@@ -56,7 +58,7 @@ namespace EmpresteFacil.Services
 
             if (_userManager.FindByEmailAsync("admin@localhost").Result == null)
             {
-                IdentityUser user = new IdentityUser();
+                Usuario user = new Usuario();
                 user.UserName = "admin@localhost";
                 user.Email = "admin@localhost";
                 user.NormalizedUserName = "ADMIN@LOCALHOST";
@@ -64,8 +66,9 @@ namespace EmpresteFacil.Services
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
+                user.Nome = "Admin de teste";
 
-                IdentityResult result = _userManager.CreateAsync(user, "Numsey#2022").Result;
+                IdentityResult result = _userManager.CreateAsync(user, "Admin@2022").Result;
 
                 if (result.Succeeded)
                 {

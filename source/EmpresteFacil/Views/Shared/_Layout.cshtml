@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
+@inject SignInManager<Usuario> SignInManager
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,15 +26,25 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between teste">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HowItWorks">Como Funciona?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WhoWeAre">Quem somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Ajuda</a>
-                        </li>
+
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Emprestimos" asp-action="Index">Pedir empréstimo</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HowItWorks">Como Funciona?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WhoWeAre">Quem somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Ajuda</a>
+                            </li>
+                        }
                     </ul>
                     @if (SignInManager.IsSignedIn(User))
                     {

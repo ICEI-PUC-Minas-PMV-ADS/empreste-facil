@@ -1,4 +1,5 @@
 ﻿using EmpresteFacil.Context;
+using EmpresteFacil.Models;
 using EmpresteFacil.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
@@ -33,12 +34,12 @@ public class Startup
         services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
         {
             options.AccessDeniedPath = "/Usuarios/AccessDenied";
-            options.LoginPath = "/Usuarios/Login";
+            options.LoginPath = "/Account/Login";
         });
 
 
 
-        services.AddIdentity<IdentityUser, IdentityRole>(config =>
+        services.AddIdentity<Usuario, IdentityRole>(config =>
         {
             config.SignIn.RequireConfirmedAccount = false;
             config.SignIn.RequireConfirmedEmail = false;

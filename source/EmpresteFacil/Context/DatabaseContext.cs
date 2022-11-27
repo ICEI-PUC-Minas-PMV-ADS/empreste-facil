@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace EmpresteFacil.Context
 {
-    public class DatabaseContext : IdentityDbContext<IdentityUser>
+    public class DatabaseContext : IdentityDbContext<Usuario>
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
@@ -16,13 +16,6 @@ namespace EmpresteFacil.Context
         public DbSet<Score>? Scores { get; set; }
         public DbSet<Parcelas>? Parcelas { get; set; }
         public DbSet<Emprestimo>? Emprestimos { get; set; }
-
-        public DbSet<PessoaFisica>? PessoasFisicas { get; set; }
-        public DbSet<PessoaJuridica>? PessoasJuridicas { get; set; }
-
-        public DbSet<UserData>? UserData { get; set; }
-
-        public DbSet<Usuario>? Usuarios { get; set; }
 
     }
 

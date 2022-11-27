@@ -5,6 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-EmpresteFacil-6237f7e7-1dde-41b1-9054-0515b72232b3</UserSecretsId>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Domain\**" />
+    <Content Remove="Domain\**" />
+    <EmbeddedResource Remove="Domain\**" />
+    <None Remove="Domain\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
@@ -23,9 +29,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Domain\" />
   </ItemGroup>
 </Project>
