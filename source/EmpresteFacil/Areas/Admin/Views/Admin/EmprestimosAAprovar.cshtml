@@ -1,0 +1,45 @@
+﻿@model List<Emprestimo>
+<h4>Aprovar empréstimo</h4>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id do usuário
+            </th>
+            <th>
+                Email do Usuario
+            </th>
+            <th>
+                Valor total do empréstimo
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Ações
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <th>
+                @Html.DisplayFor(model => item.Usuario.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Usuario.Email)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.ValorTotalEmprestimo)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Status)
+            </th>
+            <th>
+                @Html.ActionLink("Aprovar", "AprovarEmprestimo", new { id = @item.Id})
+            </th>
+        </tr>
+    }
+</table>

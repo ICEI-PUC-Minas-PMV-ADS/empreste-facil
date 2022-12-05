@@ -36,7 +36,7 @@ namespace EmpresteFacil.Controllers
 
             var parcelas = await _context.Parcelas
                 .Include(p => p.Emprestimo)
-                .FirstOrDefaultAsync(m => m.ParcelaId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (parcelas == null)
             {
                 return NotFound();
@@ -65,7 +65,7 @@ namespace EmpresteFacil.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmprestimoId"] = new SelectList(_context.Emprestimos, "EmprestimoId", "EmprestimoId", parcelas.EmprestimoId);
+            //ViewData["EmprestimoId"] = new SelectList(_context.Ekmprestimos, "EmprestimoId", "EmprestimoId", parcelas.EmprestimoId);
             return View(parcelas);
         }
 
@@ -82,7 +82,7 @@ namespace EmpresteFacil.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmprestimoId"] = new SelectList(_context.Emprestimos, "EmprestimoId", "EmprestimoId", parcelas.EmprestimoId);
+            //ViewData["EmprestimoId"] = new SelectList(_context.Emprestimos, "EmprestimoId", "EmprestimoId", parcelas.EmprestimoId);
             return View(parcelas);
         }
 
@@ -93,7 +93,7 @@ namespace EmpresteFacil.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ParcelaId,ValorParcela,DataVencimentoParcela,Juros,Amortizacao,DataPagamento,ValorMulta,StatusParcela,EmprestimoId")] Parcelas parcelas)
         {
-            if (id != parcelas.ParcelaId)
+            if (id != parcelas.Id)
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace EmpresteFacil.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ParcelasExists(parcelas.ParcelaId))
+                    if (!ParcelasExists(parcelas.Id))
                     {
                         return NotFound();
                     }
@@ -118,7 +118,7 @@ namespace EmpresteFacil.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmprestimoId"] = new SelectList(_context.Emprestimos, "EmprestimoId", "EmprestimoId", parcelas.EmprestimoId);
+            //ViewData["EmprestimoId"] = new SelectList(_context.Emprestimos, "EmprestimoId", "EmprestimoId", parcelas.EmprestimoId);
             return View(parcelas);
         }
 
@@ -132,7 +132,7 @@ namespace EmpresteFacil.Controllers
 
             var parcelas = await _context.Parcelas
                 .Include(p => p.Emprestimo)
-                .FirstOrDefaultAsync(m => m.ParcelaId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (parcelas == null)
             {
                 return NotFound();
@@ -162,7 +162,7 @@ namespace EmpresteFacil.Controllers
 
         private bool ParcelasExists(int id)
         {
-          return _context.Parcelas.Any(e => e.ParcelaId == id);
+          return _context.Parcelas.Any(e => e.Id == id);
         }
     }
 }

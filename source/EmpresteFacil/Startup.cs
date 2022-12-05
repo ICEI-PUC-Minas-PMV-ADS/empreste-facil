@@ -33,7 +33,7 @@ public class Startup
 
         services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
         {
-            options.AccessDeniedPath = "/Usuarios/AccessDenied";
+            options.AccessDeniedPath = "/Account/AccessDenied";
             options.LoginPath = "/Account/Login";
         });
 
