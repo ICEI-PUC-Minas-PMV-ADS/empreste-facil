@@ -43,11 +43,16 @@ namespace EmpresteFacil.Controllers
 
                 if (result.Succeeded)
                 {
-                    if (string.IsNullOrEmpty(loginVM.ReturnUrl))
+                    var isMember = await _userManager.IsInRoleAsync(user, "Member");
+                    if (isMember)
                     {
                         return RedirectToAction("Index", "Home");
                     }
-                    return Redirect(loginVM.ReturnUrl);
+                    var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+                    if (isAdmin)
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
                 }
             }
             ModelState.AddModelError("", "Falha ao realizar o login!!");

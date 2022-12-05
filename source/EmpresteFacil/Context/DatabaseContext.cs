@@ -16,6 +16,7 @@ namespace EmpresteFacil.Context
         public DbSet<Score>? Scores { get; set; }
         public DbSet<Parcelas>? Parcelas { get; set; }
         public DbSet<Emprestimo>? Emprestimos { get; set; }
+        public DbSet<Usuario>? Usuarios { get; set; }
 
     }
 

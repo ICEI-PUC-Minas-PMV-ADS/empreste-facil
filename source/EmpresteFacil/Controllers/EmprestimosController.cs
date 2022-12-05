@@ -22,7 +22,7 @@ namespace EmpresteFacil.Controllers
         public async Task<IActionResult> Index()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            return View(await _context.Emprestimos.Where(e => e.UserId == userId.ToString()).ToListAsync());
+            return View(await _context.Emprestimos.Include("Usuario").Where(e => e.Usuario.Id == userId).ToListAsync());
         }
 
         // GET: Emprestimes/Details/5
@@ -34,7 +34,7 @@ namespace EmpresteFacil.Controllers
             }
 
             var emprestimo = await _context.Emprestimos
-                .FirstOrDefaultAsync(m => m.EmprestimoId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (emprestimo == null)
             {
                 return NotFound();
@@ -57,16 +57,12 @@ namespace EmpresteFacil.Controllers
         public async Task<IActionResult> Create([Bind("ValorTotalEmprestimo,NumeroParcelas,TaxaJuros,DataInicioEmprestimo")] Emprestimo emprestimo)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            emprestimo.UserId = userId.ToString();
+            var usuario = _context.Usuarios.Find(userId);
+            emprestimo.Usuario = usuario;
             _context.Add(emprestimo);
             await _context.SaveChangesAsync();
 
-            //var teste = emprestimo.CalculoDeParcelas(emprestimo.ValorTotalEmprestimo, emprestimo.NumeroParcelas, emprestimo.TaxaJuros);
-            //ViewBag.CalcularParcela = teste;
-
-            //return RedirectToAction("Create", "Parcelas", teste);
-            return RedirectToRoute(new { controller = "Emprestimos", action = "Details", id = emprestimo.EmprestimoId });
-            //return RedirectToAction(nameof(Index));
+            return RedirectToRoute(new { controller = "Emprestimos", action = "Index" });
         }
 
         // GET: Emprestimes/Edit/5
@@ -90,9 +86,9 @@ namespace EmpresteFacil.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EmprestimoId,ValorTotalEmprestimo,NumeroParcelas,TaxaJuros,DataInicioEmprestimo")] Emprestimo emprestimo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ValorTotalEmprestimo,NumeroParcelas,TaxaJuros")] Emprestimo emprestimo)
         {
-            if (id != emprestimo.EmprestimoId)
+            if (id != emprestimo.Id)
             {
                 return NotFound();
             }
@@ -106,7 +102,7 @@ namespace EmpresteFacil.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EmprestimoExists(emprestimo.EmprestimoId))
+                    if (!EmprestimoExists(emprestimo.Id))
                     {
                         return NotFound();
                     }
@@ -129,7 +125,7 @@ namespace EmpresteFacil.Controllers
             }
 
             var emprestimo = await _context.Emprestimos
-                .FirstOrDefaultAsync(m => m.EmprestimoId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (emprestimo == null)
             {
                 return NotFound();
@@ -159,7 +155,7 @@ namespace EmpresteFacil.Controllers
 
         private bool EmprestimoExists(int id)
         {
-            return _context.Emprestimos.Any(e => e.EmprestimoId == id);
+            return _context.Emprestimos.Any(e => e.Id == id);
         }
 
         public double CalculoDeParcelas(double ValorTotalEmprestimo, int NumeroParcelas, double TaxaJuros)
@@ -167,15 +163,6 @@ namespace EmpresteFacil.Controllers
             // Formula: PMT = [PV. (1 + i) ^ n] i / [(1 + i) ^ n - 1]
             return (ValorTotalEmprestimo * Math.Pow((1 + TaxaJuros), NumeroParcelas) * TaxaJuros) / (Math.Pow((1 + TaxaJuros), NumeroParcelas) - 1);
         }
-
-        // Simulando um empréstimo
-        //public IActionResult CalculoDeParcelas(int id)
-        //{
-        //    return View(Emprestimo.);
-        //}
-
-        //public IActionResult Simulacao()
-
 
     }
 }

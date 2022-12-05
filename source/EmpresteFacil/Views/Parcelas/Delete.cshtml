@@ -57,12 +57,12 @@
             @Html.DisplayNameFor(model => model.Emprestimo)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Emprestimo.EmprestimoId)
+            @Html.DisplayFor(model => model.Emprestimo.Id)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ParcelaId" />
+        <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>
