@@ -1,7 +1,7 @@
 ﻿@model EmpresteFacil.Models.Emprestimo
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Aprovar Emprestimo";
 }
 
 <h1>Edit</h1>
@@ -10,17 +10,17 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Aprovar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="ValorTotalEmprestimo" class="control-label"></label>
-                <input asp-for="ValorTotalEmprestimo" class="form-control" />
+                <label asp-for="ValorTotalEmprestimo" class="control-label" disabled></label>
+                <input asp-for="ValorTotalEmprestimo" class="form-control" disabled />
                 <span asp-validation-for="ValorTotalEmprestimo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NumeroParcelas" class="control-label"></label>
-                <input asp-for="NumeroParcelas" class="form-control" />
+                <label asp-for="NumeroParcelas" class="control-label" disabled></label>
+                <input asp-for="NumeroParcelas" class="form-control" disabled />
                 <span asp-validation-for="NumeroParcelas" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -28,6 +28,9 @@
                 <input asp-for="TaxaJuros" class="form-control" />
                 <span asp-validation-for="TaxaJuros" class="text-danger"></span>
             </div>
+            @Html.DropDownList("Status",
+            Html.GetEnumSelectList<Status>(),
+            " Selecione o status",new { @class = "form-control" })            
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -35,10 +38,8 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

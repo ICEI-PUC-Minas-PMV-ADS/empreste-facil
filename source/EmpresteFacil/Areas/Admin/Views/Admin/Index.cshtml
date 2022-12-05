@@ -1,6 +1,24 @@
-﻿<div class="container">
-    <p>
-        <h2>Esta é a área do Administrador</h2>
-    </p>
-    <a asp-area="" asp-controller="Home" asp-action="Index">Volta a Home Page</a>
+﻿@model List<Usuario>
+<div class="container">
+    <div>
+        <h4>Usuarios cadastrados</h4>
+        <hr />
+        <table class="container">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <th>
+                        @Html.DisplayFor(model => item.Nome)
+                </th>
+                <th>
+                        @Html.DisplayFor(model => item.Email)
+                </th>
+                <th>
+                        @Html.DisplayFor(model => item.Perfil)
+                </th>
+                <th></th>
+            </tr>
+            }
+        </table>
+    </div>
 </div>

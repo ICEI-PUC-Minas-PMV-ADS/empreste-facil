@@ -11,19 +11,30 @@
 </p>
 <table class="table">
     <thead>
-        @foreach(var item in Model){
         <tr>
             <th>
-                @Html.DisplayNameFor(model => item.ValorTotalEmprestimo)
+                <p>Valor total do empréstimo</p>
             </th>
             <th>
-                    @Html.DisplayNameFor(model => item.NumeroParcelas)
+                <p>Número de parcelas</p>
             </th>
             <th>
-                    @Html.DisplayNameFor(model => item.TaxaJuros)
+                <p>Status</p>
             </th>
-            <th></th>
         </tr>
-        }
     </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(model => item.ValorTotalEmprestimo)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.NumeroParcelas)
+            </th>
+            <th>
+                @Html.DisplayFor(model => item.Status)
+            </th>
+        </tr>
+    }
 </table>

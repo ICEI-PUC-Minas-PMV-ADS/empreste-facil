@@ -8,26 +8,29 @@ namespace EmpresteFacil.Models
     public class Emprestimo
     {
         [Key]
-        public int EmprestimoId { get; set; }
-
-        //public string TipoEmprestimo { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Valor do empréstimo")]
-        //[Column(TypeName = "decimal(10,2)")]
         public double ValorTotalEmprestimo { get; set; }
 
         [Display(Name = "Valor da parcela")]
         public double NumeroParcelas { get; set; }
 
         [Display(Name = "Taxa de juros")]
-        //[Column(TypeName = "decimal(4,2)")]
         public double TaxaJuros { get; set; }
 
-        public string UserId { get; set; }
+        public Status Status { get; set; }
+       
+        public Usuario Usuario { get; set; }
+    }
 
-        //[DataType(DataType.DateTime)]
-        //[Display(Name = "Data de início do empréstimo")]
-        //public DateTime DataInicioEmprestimo { get; set; }
-        /*List<Parcelas> Parcelas { get; set; *//*}*/
+    public enum Status
+    {
+        [Display(Name = "Em análise")]
+        EmAnalise,
+        [Display(Name = "Aprovado")]
+        Aprovado,
+        [Display(Name = "Reprovado")]
+        Reprovado
     }
 }

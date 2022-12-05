@@ -11,11 +11,21 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
+                <a class="navbar-brand" asp-area="Admin" asp-controller="Admin" asp-action="Index">
+                        Área do Administrador
+                </a>
                 <div class="navbar-collapse collapse d-sm-inline-flex">
-                    <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="ApproveLoan">Aprovar pedidos de emprestimo</a>
+                    <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="EmprestimosAAprovar">Aprovar pedidos de emprestimo</a>
                 </div>
             </div>
+            <form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm"
+                  method="post" class="navbar-left">
+                <ul class="nav navbar-nav navbar-left">
+                    <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                        Logout : @User.Identity.Name &nbsp;
+                    </button>
+                </ul>
+            </form>
         </nav>
     </header>
     <div class="container">
