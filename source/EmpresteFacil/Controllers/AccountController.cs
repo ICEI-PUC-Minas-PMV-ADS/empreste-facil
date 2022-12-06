@@ -78,7 +78,7 @@ namespace EmpresteFacil.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new Usuario { UserName = registroVM.UserName, Nome = registroVM.Nome, Perfil = registroVM.Perfil, TelefoneFixo = registroVM.TelefoneFixo, Email = registroVM.Email, EmailConfirmed = true  };
+                var user = new Usuario { UserName = registroVM.UserName, Nome = registroVM.Nome, Perfil = registroVM.Perfil, TelefoneFixo = registroVM.TelefoneFixo, Email = registroVM.Email, EmailConfirmed = true, Document = registroVM.Document, RG = registroVM.RG  };
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
                 if (result.Succeeded)
                 {

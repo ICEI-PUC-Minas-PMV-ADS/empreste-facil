@@ -10,7 +10,7 @@ namespace EmpresteFacil.Models
         public string? UserName { get; set; }
 
         [Required(ErrorMessage = "Informe uma senha")]
-        [Display(Name = "Senha")]
+        [Display(Name = "Senha, certifique-se de colocar letras maiúsculas, números e símbolos. *")]
         public string? Password { get; set; }
 
         [Required(ErrorMessage = "Informe um email")]
@@ -27,9 +27,18 @@ namespace EmpresteFacil.Models
         [DataType(DataType.PhoneNumber)]
         public string? Celular { get; set; }
 
-        [DisplayName("Telefone fixo")]
+        [DisplayName("Telefone fixo* ")]
         [DataType(DataType.PhoneNumber)]
         public string? TelefoneFixo { get; set; }
+
+        [StringLength(255, MinimumLength = 3, ErrorMessage = "O RG deve ter ao menos 3 caracteres.")]
+        [Display(Name = "Documento de identidade - RG * ")]
+        public string RG { get; set; }
+
+        [Required]
+        [Display(Name = "Documento de identidade - CPF/CNPJ*")]
+        public string Document { get; set; }
+
 
         public Perfil Perfil { get; set; }
 

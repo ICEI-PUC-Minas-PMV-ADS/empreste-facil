@@ -48,8 +48,20 @@
                         </div>
 
                         <div class="form-group mt-2 mb-2">
+                            <label asp-for="Document" class="control-label"></label>
+                            <input asp-for="Document" class="form-control" />
+                            <span asp-validation-for="Document" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-2 mb-2">
                             <span>Pessoa física</span> @Html.RadioButtonFor(m => m.Perfil,Perfil.PessoaFisica)
                             <span>Pessoa jurídica</span> @Html.RadioButtonFor(m => m.Perfil,Perfil.PessoaJuridica)
+                        </div>
+
+                        <div class="form-group mt-2 mb-2">
+                            <label asp-for="RG" class="control-label"></label>
+                            <input asp-for="RG" class="form-control" />
+                            <span asp-validation-for="RG" class="text-danger"></span>
                         </div>
 
                         <div class="form-group mt-4">
