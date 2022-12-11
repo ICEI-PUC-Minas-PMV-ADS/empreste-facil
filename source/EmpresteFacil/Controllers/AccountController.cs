@@ -31,15 +31,12 @@ namespace EmpresteFacil.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginVM)
         {
-            if (!ModelState.IsValid)
-                return View(loginVM);
-
             var user = await _userManager.FindByNameAsync(loginVM.UserName);
 
             if (user != null)
             {
                 var result = await _signInManager.PasswordSignInAsync(user,
-                loginVM.Password, false, false);
+                loginVM.Password, true, false);
 
                 if (result.Succeeded)
                 {
@@ -56,7 +53,7 @@ namespace EmpresteFacil.Controllers
                 }
             }
             ModelState.AddModelError("", "Falha ao realizar o login!!");
-            return View(loginVM);
+            return View();
         }
 
         [AllowAnonymous]
@@ -82,6 +79,7 @@ namespace EmpresteFacil.Controllers
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
                 if (result.Succeeded)
                 {
+                    _userManager.AddToRoleAsync(user, "Member").Wait();
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Success", "Account");
                 }
