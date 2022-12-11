@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmpresteFacil.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221205152743_EmprestimoStatus")]
-    partial class EmprestimoStatus
+    [Migration("20221211175644_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,11 @@ namespace EmpresteFacil.Migrations
 
             modelBuilder.Entity("EmpresteFacil.Models.Emprestimo", b =>
                 {
-                    b.Property<int>("EmprestimoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmprestimoId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<double>("NumeroParcelas")
                         .HasColumnType("float");
@@ -47,7 +47,7 @@ namespace EmpresteFacil.Migrations
                     b.Property<double>("ValorTotalEmprestimo")
                         .HasColumnType("float");
 
-                    b.HasKey("EmprestimoId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UsuarioId");
 
@@ -56,11 +56,11 @@ namespace EmpresteFacil.Migrations
 
             modelBuilder.Entity("EmpresteFacil.Models.Parcelas", b =>
                 {
-                    b.Property<int>("ParcelaId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ParcelaId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<decimal>("Amortizacao")
                         .HasColumnType("decimal(18,2)");
@@ -86,7 +86,7 @@ namespace EmpresteFacil.Migrations
                     b.Property<decimal>("ValorParcela")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("ParcelaId");
+                    b.HasKey("Id");
 
                     b.HasIndex("EmprestimoId");
 

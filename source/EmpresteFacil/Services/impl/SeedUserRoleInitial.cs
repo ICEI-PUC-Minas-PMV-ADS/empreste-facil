@@ -48,6 +48,9 @@ namespace EmpresteFacil.Services
                 user.SecurityStamp = Guid.NewGuid().ToString();
                 user.Nome = "Usuario de Teste";
                 user.TelefoneFixo = "3233310000";
+                user.Document = "222222222";
+                user.RG = "222222222";
+
                 IdentityResult result = _userManager.CreateAsync(user, "Usuario@2022").Result;
 
                 if (result.Succeeded)
@@ -67,6 +70,10 @@ namespace EmpresteFacil.Services
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
                 user.Nome = "Admin de teste";
+                user.TelefoneFixo = "3233310000";
+                user.Document = "33333333";
+                user.RG = "33333333";
+
 
                 IdentityResult result = _userManager.CreateAsync(user, "Admin@2022").Result;
 
