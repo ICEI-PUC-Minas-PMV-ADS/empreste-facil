@@ -31,6 +31,8 @@ namespace EmpresteFacil.Migrations
                     Nome = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     TelefoneFixo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Perfil = table.Column<int>(type: "int", nullable: false),
+                    RG = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Document = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -49,22 +51,6 @@ namespace EmpresteFacil.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Emprestimos",
-                columns: table => new
-                {
-                    EmprestimoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ValorTotalEmprestimo = table.Column<double>(type: "float", nullable: false),
-                    NumeroParcelas = table.Column<double>(type: "float", nullable: false),
-                    TaxaJuros = table.Column<double>(type: "float", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Emprestimos", x => x.EmprestimoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -204,10 +190,32 @@ namespace EmpresteFacil.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Emprestimos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ValorTotalEmprestimo = table.Column<double>(type: "float", nullable: false),
+                    NumeroParcelas = table.Column<double>(type: "float", nullable: false),
+                    TaxaJuros = table.Column<double>(type: "float", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Emprestimos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Emprestimos_AspNetUsers_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Parcelas",
                 columns: table => new
                 {
-                    ParcelaId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ValorParcela = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DataVencimentoParcela = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -220,12 +228,12 @@ namespace EmpresteFacil.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Parcelas", x => x.ParcelaId);
+                    table.PrimaryKey("PK_Parcelas", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Parcelas_Emprestimos_EmprestimoId",
                         column: x => x.EmprestimoId,
                         principalTable: "Emprestimos",
-                        principalColumn: "EmprestimoId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -269,6 +277,11 @@ namespace EmpresteFacil.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Emprestimos_UsuarioId",
+                table: "Emprestimos",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Parcelas_EmprestimoId",
                 table: "Parcelas",
                 column: "EmprestimoId");
@@ -304,10 +317,10 @@ namespace EmpresteFacil.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Emprestimos");
 
             migrationBuilder.DropTable(
-                name: "Emprestimos");
+                name: "AspNetUsers");
         }
     }
 }
